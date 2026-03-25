@@ -1,0 +1,949 @@
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* stylelint-disable property-no-vendor-prefix */
+@-webkit-keyframes e-input-ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+}
+@keyframes e-input-ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(4);
+            transform: scale(4);
+  }
+}
+@-webkit-keyframes slideTopUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+@keyframes slideTopUp {
+  from {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+/* stylelint-disable-line no-empty-source */
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* stylelint-disable-line no-empty-source */
+.e-content-placeholder.e-textbox.e-placeholder-textbox {
+  background-size: 300px 33px;
+  min-height: 33px;
+}
+
+.e-input-group.e-input-focus.e-multi-line-input textarea.e-textbox {
+  padding-right: 30px;
+}
+
+.e-input-group.e-input-focus.e-rtl.e-multi-line-input textarea.e-textbox {
+  padding-left: 30px;
+}
+
+div.e-input-group.e-prepend-wrapper .e-prepend-template,
+span.e-input-group.e-prepend-wrapper .e-prepend-template {
+  padding: 12px 8px 12px 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons,
+span.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons {
+  font-size: 16px;
+  margin: 0 3px;
+}
+div.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons:focus-visible,
+span.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons:focus-visible {
+  outline: none;
+}
+div.e-input-group.e-prepend-wrapper .e-prepend-template .e-input-separator,
+span.e-input-group.e-prepend-wrapper .e-prepend-template .e-input-separator {
+  border: 1px solid rgba(var(--color-sf-outline-variant));
+  border-width: 0 2px 0 0;
+  margin: 0 5px;
+  padding: 7px 0;
+}
+div.e-input-group.e-prepend-wrapper input.e-control,
+span.e-input-group.e-prepend-wrapper input.e-control {
+  height: auto;
+}
+div.e-input-group.e-prepend-wrapper input.e-input, div.e-input-group.e-prepend-wrapper.e-input-focus input.e-input, div.e-input-group.e-prepend-wrapper.e-append-wrapper input.e-input,
+span.e-input-group.e-prepend-wrapper input.e-input,
+span.e-input-group.e-prepend-wrapper.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-append-wrapper input.e-input {
+  padding-left: 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top {
+  top: -6px;
+}
+div.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom {
+  top: -3px;
+}
+div.e-input-group.e-prepend-wrapper.e-outline.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-input-group.e-prepend-wrapper.e-outline.e-multi-line-input.e-float-input.e-control-wrapper.e-input-focus .e-float-text,
+span.e-input-group.e-prepend-wrapper.e-outline.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-outline.e-multi-line-input.e-float-input.e-control-wrapper.e-input-focus .e-float-text {
+  top: -6px;
+}
+div.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template {
+  padding: 12px 8px 12px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-outline input.e-input, div.e-input-group.e-prepend-wrapper.e-outline input.e-input:focus, div.e-input-group.e-prepend-wrapper.e-outline.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-outline input.e-input,
+span.e-input-group.e-prepend-wrapper.e-outline input.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-outline.e-input-focus input.e-input {
+  padding: 10px 12px 9px 0;
+}
+div.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper input.e-input, div.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper input.e-input:focus, div.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper input.e-input,
+span.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper input.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-outline.e-append-wrapper.e-input-focus input.e-input {
+  padding: 10px 0 9px;
+}
+div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-bottom {
+  top: -6px;
+}
+div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-top {
+  top: -6px;
+}
+div.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template {
+  padding: 12px 8px 12px 0;
+}
+div.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-bottom {
+  top: 15px;
+}
+div.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric) label.e-float-text.e-label-top {
+  top: 10px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template {
+  display: block;
+  padding: 7px 8px 7px 0;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template .e-input-separator,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template .e-input-separator {
+  padding: 5px 0 2px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input {
+  height: auto;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper.e-input-focus .e-float-text,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper.e-input-focus .e-float-text {
+  top: -20px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper.e-rtl label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper.e-rtl label.e-float-text.e-label-bottom {
+  top: -9px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template {
+  padding: 4px 8px 5px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input:focus {
+  padding: 0 1px 5px 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled textarea.e-input:focus {
+  padding: 0 12px 5px 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 10px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 17px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-rtl .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-rtl .e-prepend-template {
+  padding: 4px 12px 5px 5px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template {
+  padding: 11px 8px 11px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: -4px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input:focus {
+  padding: 0 1px 5px 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus {
+  padding: 0 12px 5px 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template {
+  padding: 12px 1px 12px 7px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl input.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-input-focus input.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-append-wrapper input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-append-wrapper input.e-input {
+  padding-right: 1px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template {
+  padding: 12px 12px 12px 8px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-outline input.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-outline input.e-input:focus, div.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline input.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-input-focus input.e-input {
+  padding: 10px 2px 9px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper input.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper input.e-input:focus, div.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper.e-input-focus input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper input.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper input.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-outline.e-append-wrapper.e-input-focus input.e-input {
+  padding: 10px 0 9px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template {
+  padding: 12px 0 12px 8px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-filled textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-filled.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-filled textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-filled textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-filled.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-filled textarea.e-input:focus {
+  padding: 0 1px 5px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template {
+  padding: 7px 0 7px 3px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template {
+  padding: 12px 12px 12px 8px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input:focus {
+  padding: 0 1px 5px 12px;
+}
+div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper.e-input-focus textarea.e-input, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input:focus, div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper.e-input-focus textarea.e-input,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline.e-append-wrapper textarea.e-input:focus,
+span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled.e-append-wrapper textarea.e-input:focus {
+  padding: 0 1px 5px 1px;
+}
+div.e-input-group.e-append-wrapper .e-append-template,
+span.e-input-group.e-append-wrapper .e-append-template {
+  padding: 12px 1px 12px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+div.e-input-group.e-append-wrapper .e-append-template .e-icons,
+span.e-input-group.e-append-wrapper .e-append-template .e-icons {
+  font-size: 16px;
+  margin: 0 3px;
+}
+div.e-input-group.e-append-wrapper .e-append-template .e-icons:focus-visible,
+span.e-input-group.e-append-wrapper .e-append-template .e-icons:focus-visible {
+  outline: none;
+}
+div.e-input-group.e-append-wrapper .e-append-template .e-input-separator,
+span.e-input-group.e-append-wrapper .e-append-template .e-input-separator {
+  border: 1px solid rgba(var(--color-sf-outline-variant));
+  border-width: 0 2px 0 0;
+  margin: 0 5px;
+  padding: 7px 0;
+}
+div.e-input-group.e-append-wrapper input.e-control,
+span.e-input-group.e-append-wrapper input.e-control {
+  height: auto;
+}
+div.e-input-group.e-append-wrapper.e-outline .e-append-template,
+span.e-input-group.e-append-wrapper.e-outline .e-append-template {
+  padding: 12px 12px 12px 3px;
+}
+div.e-input-group.e-append-wrapper.e-outline input.e-input, div.e-input-group.e-append-wrapper.e-outline input.e-input:focus, div.e-input-group.e-append-wrapper.e-outline.e-input-focus input.e-input,
+span.e-input-group.e-append-wrapper.e-outline input.e-input,
+span.e-input-group.e-append-wrapper.e-outline input.e-input:focus,
+span.e-input-group.e-append-wrapper.e-outline.e-input-focus input.e-input {
+  padding: 10px 0 9px 12px;
+}
+div.e-input-group.e-append-wrapper.e-filled .e-append-template,
+span.e-input-group.e-append-wrapper.e-filled .e-append-template {
+  padding: 12px 0 12px 8px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template,
+span.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template {
+  display: block;
+  padding: 7px 0 7px 8px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template .e-input-separator,
+span.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template .e-input-separator {
+  padding: 5px 0 2px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input textarea.e-input,
+span.e-input-group.e-append-wrapper.e-multi-line-input textarea.e-input {
+  height: auto;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template {
+  padding: 4px 12px 5px 5px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled textarea.e-input, div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-input-focus textarea.e-input, div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled textarea.e-input:focus,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled textarea.e-input,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-input-focus textarea.e-input,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled textarea.e-input:focus {
+  padding: 0 1px 5px 12px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template {
+  padding: 11px 12px 11px 3px;
+}
+div.e-input-group.e-append-wrapper.e-multi-line-input.e-outline textarea.e-input, div.e-input-group.e-append-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input, div.e-input-group.e-append-wrapper.e-multi-line-input.e-outline textarea.e-input:focus,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-outline textarea.e-input,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+span.e-input-group.e-append-wrapper.e-multi-line-input.e-outline textarea.e-input:focus {
+  padding: 0 1px 5px 12px;
+}
+div.e-input-group.e-append-wrapper.e-rtl .e-append-template,
+span.e-input-group.e-append-wrapper.e-rtl .e-append-template {
+  padding: 7px 3px 7px 0;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template,
+span.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template {
+  padding: 12px 3px 12px 12px;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-outline input.e-input, div.e-input-group.e-append-wrapper.e-rtl.e-outline input.e-input:focus, div.e-input-group.e-append-wrapper.e-rtl.e-outline.e-input-focus input.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-outline input.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-outline input.e-input:focus,
+span.e-input-group.e-append-wrapper.e-rtl.e-outline.e-input-focus input.e-input {
+  padding: 10px 12px 9px 0;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template,
+span.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template {
+  padding: 12px 8px 12px 0;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template {
+  padding: 4px 5px 5px 12px;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled textarea.e-input, div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled.e-input-focus textarea.e-input, div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled textarea.e-input:focus,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled textarea.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled.e-input-focus textarea.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled textarea.e-input:focus {
+  padding: 0 12px 5px 1px;
+}
+div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input, div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline.e-input-focus textarea.e-input, div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input:focus,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline textarea.e-input:focus {
+  padding: 0 12px 5px 1px;
+}
+
+.e-float-input.e-input-group.e-prepend-wrapper.e-append-wrapper:not(.e-filled) label.e-float-text.e-label-top {
+  margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.e-float-input.e-input-group.e-prepend-wrapper:not(.e-filled) label.e-float-text.e-label-top {
+  margin-left: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.e-float-input.e-rtl.e-input-group.e-prepend-wrapper.e-append-wrapper:not(.e-filled) label.e-float-text.e-label-top,
+.e-float-input.e-rtl.e-input-group.e-prepend-wrapper:not(.e-filled) label.e-float-text.e-label-top {
+  margin-right: 0 !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.e-input-group.e-prepend-wrapper.e-input-focus input.e-input {
+  padding-left: 1px;
+}
+
+.e-input-group.e-rtl.e-prepend-wrapper.e-input-focus input.e-input {
+  padding-right: 1px;
+}
+
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* stylelint-disable-line no-empty-source */
+.e-bigger .e-content-placeholder.e-textbox.e-placeholder-textbox,
+.e-bigger.e-content-placeholder.e-textbox.e-placeholder-textbox {
+  background-size: 300px 40px;
+  min-height: 40px;
+}
+
+.e-bigger .e-input-group.e-input-focus.e-multi-line-input textarea.e-textbox {
+  padding-right: 32px;
+}
+
+.e-bigger .e-input-group.e-input-focus.e-rtl.e-multi-line-input textarea.e-textbox {
+  padding-left: 32px;
+}
+
+.e-bigger div.e-input-group.e-prepend-wrapper .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons,
+div.e-bigger.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons,
+.e-bigger span.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons,
+span.e-bigger.e-input-group.e-prepend-wrapper .e-prepend-template .e-icons {
+  font-size: 20px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-top {
+  top: -6px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper:not(.e-mask, .e-numeric, .e-outline, .e-filled) label.e-float-text.e-label-bottom {
+  top: -7px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-outline .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-bottom {
+  top: -7px !important; /* stylelint-disable-line declaration-no-important */
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-label-top {
+  top: -6px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-filled input.e-input, .e-bigger div.e-input-group.e-prepend-wrapper.e-filled input.e-input:focus, .e-bigger div.e-input-group.e-prepend-wrapper.e-filled.e-input-focus input.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled input.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled input.e-input:focus,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-input-focus input.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled input.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled input.e-input:focus,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled.e-input-focus input.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled input.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled input.e-input:focus,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-input-focus input.e-input {
+  padding: 2px 3px 5px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled .e-prepend-template {
+  padding: 14px 14px 14px 2px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-bottom {
+  top: 19px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-label-top {
+  top: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-bottom {
+  top: -6px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-float-input.e-control-wrapper label.e-label-top {
+  top: -20px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input, .e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-input-focus textarea.e-input, .e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input:focus,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-input-focus textarea.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input:focus,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-input-focus textarea.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input:focus,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-input-focus textarea.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input textarea.e-input:focus {
+  padding: 10px 0 1px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input, .e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input, .e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-input-focus textarea.e-input,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline textarea.e-input:focus {
+  padding: 1px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-bottom {
+  top: -11px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-outline.e-float-input.e-control-wrapper label.e-label-top {
+  top: -6px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled .e-prepend-template {
+  padding: 1px 14px 1px 14px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-bottom,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-bottom {
+  top: 21px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top {
+  top: -2px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-outline .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-filled .e-prepend-template {
+  padding: 14px 2px 14px 14px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-outline .e-prepend-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled .e-prepend-template,
+div.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled .e-prepend-template,
+.e-bigger span.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled .e-prepend-template,
+span.e-bigger.e-input-group.e-prepend-wrapper.e-rtl.e-multi-line-input.e-filled .e-prepend-template {
+  padding: 1px 14px 1px 14px;
+}
+.e-bigger div.e-input-group.e-append-wrapper .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper .e-append-template .e-icons,
+div.e-bigger.e-input-group.e-append-wrapper .e-append-template .e-icons,
+.e-bigger span.e-input-group.e-append-wrapper .e-append-template .e-icons,
+span.e-bigger.e-input-group.e-append-wrapper .e-append-template .e-icons {
+  font-size: 20px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-outline .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-outline .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-outline .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-outline .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-filled .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-filled .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-filled .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-filled .e-append-template {
+  padding: 14px 2px 14px 14px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-outline .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-filled .e-append-template {
+  padding: 1px 14px 1px 14px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+div.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+.e-bigger span.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top,
+span.e-bigger.e-input-group.e-append-wrapper.e-multi-line-input.e-filled.e-float-input.e-control-wrapper label.e-label-top {
+  top: 1px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-outline .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-filled .e-append-template {
+  padding: 14px 14px 14px 2px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-outline .e-append-template {
+  padding: 10px;
+}
+.e-bigger div.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template,
+div.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template,
+.e-bigger span.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template,
+span.e-bigger.e-input-group.e-append-wrapper.e-rtl.e-multi-line-input.e-filled .e-append-template {
+  padding: 1px 14px 1px 14px;
+}
+
+.e-bigger.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus input.e-input, .e-bigger.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus textarea.e-input,
+.e-bigger.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input input.e-input,
+.e-bigger.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input textarea.e-input,
+.e-bigger .e-float-input.e-input-group.e-prepend-wrapper.e-input-focus input.e-input,
+.e-bigger .e-float-input.e-input-group.e-prepend-wrapper.e-input-focus textarea.e-input,
+.e-bigger .e-float-input.e-input-group.e-prepend-wrapper.e-valid-input input.e-input,
+.e-bigger .e-float-input.e-input-group.e-prepend-wrapper.e-valid-input textarea.e-input {
+  padding-left: 0;
+}
+
+.e-bigger.e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus input.e-input, .e-bigger.e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus textarea.e-input,
+.e-bigger.e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input input.e-input,
+.e-bigger.e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input textarea.e-input,
+.e-bigger .e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus input.e-input,
+.e-bigger .e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-input-focus textarea.e-input,
+.e-bigger .e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input input.e-input,
+.e-bigger .e-rtl.e-float-input.e-input-group.e-prepend-wrapper.e-valid-input textarea.e-input {
+  padding-right: 0;
+}

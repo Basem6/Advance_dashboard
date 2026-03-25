@@ -1,0 +1,162 @@
+/* stylelint-disable property-no-vendor-prefix */
+.e-input-group-icon.e-spin-up::before {
+  content: "\e776";
+  font-family: "e-icons";
+}
+
+.e-input-group-icon.e-spin-down::before {
+  content: "\e729";
+  font-family: "e-icons";
+}
+
+.e-numeric-container {
+  width: 100%;
+}
+
+.e-content-placeholder.e-numeric.e-placeholder-numeric {
+  background-size: 300px 33px;
+  min-height: 33px;
+}
+
+.e-float-input.e-input-group.e-control-wrapper.e-numeric .e-numeric-hidden,
+.e-input-group.e-control-wrapper.e-numeric .e-numeric-hidden,
+.e-float-input.e-control-wrapper.e-numeric .e-numeric-hidden,
+.e-float-input.e-input-group.e-control-wrapper.e-numeric.e-input-focus .e-numeric-hidden,
+.e-input-group.e-control-wrapper.e-numeric.e-input-focus .e-numeric-hidden,
+.e-float-input.e-control-wrapper.e-numeric.e-input-focus .e-numeric-hidden {
+  border: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+div.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 15px;
+}
+div.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 15px;
+}
+div.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 15px;
+}
+div.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 15px;
+}
+div.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 15px;
+}
+div.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 20px;
+}
+
+.e-numeric.e-input-group.e-prepend-wrapper.e-filled input,
+.e-numeric.e-input-group.e-append-wrapper.e-filled input {
+  height: auto;
+}
+
+.e-numeric.e-input-group.e-prepend-wrapper.e-input-focus input.e-input,
+.e-numeric.e-input-group.e-prepend-wrapper input.e-input {
+  padding-left: 0;
+}
+
+.e-numeric.e-rtl.e-input-group.e-prepend-wrapper.e-input-focus input.e-input,
+.e-numeric.e-rtl.e-input-group.e-prepend-wrapper input.e-input {
+  padding-right: 0;
+}
+
+/* stylelint-disable property-no-vendor-prefix */
+.e-numeric.e-control-wrapper.e-input-group .e-input-group-icon {
+  font-size: 16px;
+}
+
+.e-small .e-control-wrapper.e-numeric.e-input-group .e-input-group-icon, .e-small.e-control-wrapper.e-numeric.e-input-group .e-input-group-icon {
+  font-size: 14px;
+}
+
+/* stylelint-disable property-no-vendor-prefix */
+.e-bigger.e-content-placeholder.e-numeric.e-placeholder-numeric,
+.e-bigger .e-content-placeholder.e-numeric.e-placeholder-numeric {
+  background-size: 300px 40px;
+  min-height: 40px;
+}
+
+.e-bigger .e-control-wrapper.e-numeric.e-input-group .e-input-group-icon, .e-bigger.e-control-wrapper.e-numeric.e-input-group .e-input-group-icon {
+  font-size: 20px;
+}
+
+.e-small.e-bigger .e-control-wrapper.e-numeric.e-input-group .e-input-group-icon,
+.e-small.e-bigger.e-control-wrapper.e-numeric.e-input-group .e-input-group-icon,
+.e-small .e-bigger.e-control-wrapper.e-numeric.e-input-group .e-input-group-icon,
+.e-bigger .e-small.e-control-wrapper.e-numeric.e-input-group .e-input-group-icon {
+  font-size: 18px;
+}
+
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 18px;
+}
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 15px;
+}
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 19px;
+}
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-outline.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 18px;
+}
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-bottom {
+  top: 19px;
+}
+div.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top, div.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger div.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+span.e-bigger.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-prepend-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top,
+.e-bigger span.e-numeric.e-input-group.e-append-wrapper.e-filled.e-float-input.e-control-wrapper label.e-float-text.e-label-top {
+  top: 18px;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "test2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^8.0.2"
+  },
+  "dependencies": {
+    "@syncfusion/ej2-base": "^33.1.44",
+    "@syncfusion/ej2-buttons": "^33.1.44",
+    "@syncfusion/ej2-calendars": "^33.1.44",
+    "@syncfusion/ej2-charts": "^33.1.44",
+    "@tailwindcss/vite": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  }
+}

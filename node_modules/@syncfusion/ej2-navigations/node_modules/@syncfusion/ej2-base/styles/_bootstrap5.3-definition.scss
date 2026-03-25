@@ -1,0 +1,9 @@
+@use 'definition/bootstrap5.3' as *;
+@forward 'definition/bootstrap5.3';
+
+$font-size: $text-xs !default;
+$font-weight: $font-weight-normal !default;
+$error-font-color: $danger !default;
+$warning-font-color: $yellow !default;
+$success-font-color: #198754 !default;
+$information-font-color: #0dcaf0 !default;

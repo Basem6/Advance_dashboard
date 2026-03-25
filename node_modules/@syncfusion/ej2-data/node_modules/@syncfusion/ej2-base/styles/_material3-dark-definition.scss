@@ -1,0 +1,18 @@
+@use 'sass:meta';
+@use 'definition/material3-dark' as *;
+@forward 'definition/material3-dark';
+
+$is-roboto-loaded: false !default;
+
+@if not $is-roboto-loaded{
+  //sass-lint:disable no-url-protocols,no-url-domains
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,900&display=swap');// stylelint-disable-line no-invalid-position-at-import-rule
+}
+
+$font-family: $font-family !default;
+$font-size: $text-xs !default;
+$font-weight: $font-weight-normal !default;
+$error-font-color: $danger !default;
+$warning-font-color: $warning !default;
+$success-font-color: $success !default;
+$information-font-color: $info !default;

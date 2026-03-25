@@ -1,0 +1,308 @@
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+.smart-textarea-suggestion-overlay {
+  display: none;
+  position: absolute;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-right: 0.5rem;
+}
+
+.smart-textarea-suggestion-overlay.smart-textarea-suggestion-overlay-visible {
+  display: block;
+}
+
+.smart-textarea-caret {
+  position: absolute;
+  width: 0.8px;
+  display: none;
+  -webkit-animation: caret-blink 1.025s step-end infinite;
+          animation: caret-blink 1.025s step-end infinite;
+}
+
+@-webkit-keyframes caret-blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes caret-blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+
+/* Font Family */
+/* Font Sizes */
+/* Radius */
+/* 1px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+/* 17px */
+/* 18px */
+/* 19px */
+/* 20px */
+/* 21px */
+/* 22px */
+/* 23px */
+/* 24px */
+/* 25px */
+/* 26px */
+/* 27px */
+/* 28px */
+/* 29px */
+/* 30px */
+/* 31px */
+/* 32px */
+/* 33px */
+/* 34px */
+/* 35px */
+/* 36px */
+/* 37px */
+/* 38px */
+/* 39px */
+/* 40px */
+/* 41px */
+/* 42px */
+/* 43px */
+/* 44px */
+/* 45px */
+/* 46px */
+/* 47px */
+/* 48px */
+/* 49px */
+/* 50px */
+/* 5em */
+/* 65% */
+/* border */
+/* 0px */
+/* 1px */
+/* 1.5px */
+/* 2px */
+/* 3px */
+/* 4px */
+/* 5px */
+/* 6px */
+/* 7px */
+/* 8px */
+/* 9px */
+/* 10px */
+/* 11px */
+/* 12px */
+/* 13px */
+/* 14px */
+/* 15px */
+/* 16px */
+.smart-textarea-suggestion-overlay {
+  background-color: rgba(var(--color-sf-surface));
+  color: rgba(var(--color-sf-primary));
+  -webkit-box-shadow: 0 1.25px 4px 0 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.25px 4px 0 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 4px 8px 3px rgba(0, 0, 0, 0.15);
+}
+
+[data-suggestion-visible]::-moz-selection {
+  color: #999 !important; /* stylelint-disable-line declaration-no-important */
+  background: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+[data-suggestion-visible]::selection {
+  color: #999 !important; /* stylelint-disable-line declaration-no-important */
+  background: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.smart-textarea-caret {
+  background: #ff0000;
+}
