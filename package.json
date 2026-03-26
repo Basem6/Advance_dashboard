@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "engines": {
+  "node": "18.x"
+   }
   "scripts": {
     "build": "vite build",
     "preview": "vite preview",
