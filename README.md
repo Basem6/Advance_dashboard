@@ -1,17 +1,16 @@
 # 📊 Advanced Admin Dashboard
 
-A scalable and performance-oriented **Admin Dashboard** designed to manage client data, monitor system activity, and provide actionable insights through structured analytics and visual reports.
+## 🖼️ Preview
 
-This dashboard simulates a real-world admin panel environment where multiple administrators can interact with organized datasets, track key metrics, and analyze trends using dynamic charts.
-
+### Dashboard Overview
+![Dashboard](./assets/screenshots/dashboard.png)
 ---
 
 ## 🧠 Overview
 
-The project focuses on delivering a clean and intuitive interface for handling complex data in a simplified way.
-It demonstrates how raw data (clients, statistics, activity) can be transformed into meaningful visual insights.
+A scalable and performance-oriented **Admin Dashboard** designed to manage client data, monitor system activity, and provide actionable insights through structured analytics and visual reports.
 
-The system is structured to represent a multi-admin workflow, where different roles can access and monitor shared data efficiently.
+This dashboard simulates a real-world admin panel environment where multiple administrators can interact with organized datasets, track key metrics, and analyze trends using dynamic charts.
 
 ---
 
