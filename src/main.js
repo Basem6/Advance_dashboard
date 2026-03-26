@@ -494,6 +494,21 @@ setTimeout(() => {
 }, 0);
     }
 }
+let data_person=[
+    {id:472042,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472043,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
+    {id:472044,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472045,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
+    {id:472046,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
+    {id:472047,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472048,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
+    {id:472049,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472050,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
+    {id:472051,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
+    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+]
 export function click_modal(){
         let modal = document.querySelector(".modal");
         let closeModal = document.querySelector("#closeModal");
