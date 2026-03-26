@@ -4,6 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "vercel-build": "npm run build",
     "build": "vite build",
     "preview": "vite preview",
     "dev": "vite",
