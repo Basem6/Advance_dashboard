@@ -168,7 +168,7 @@ function click_modal(){
         let btn = document.querySelector(".add-application");
         let create_btn = document.querySelector("#create");
         btn.addEventListener("click",function(){
-            modal.style.cssText="opacity: 1;scale:1"
+            modal.classList.add("opacity-100");
         })
         closeModal.addEventListener("click",function(){
             modal.style.cssText="opacity: 0;scale:0"

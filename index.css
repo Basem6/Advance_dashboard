@@ -178,7 +178,6 @@ tbody > tr:last-child > td{
         opacity: 0;
         transform: translateX(-50%);
         top: 20%;
-        scale: 0;
         max-width: 400px;
         max-height: 400px;
         transform-origin: center;
