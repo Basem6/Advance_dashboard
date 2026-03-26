@@ -3,7 +3,7 @@
 ## 🖼️ Preview
 
 ### Dashboard Overview
-![Dashboard](./public/assets/screenshots/dashboard.png)
+![Dashboard](./public/assests/screenshots/dashboard.png)
 ---
 
 ## 🧠 Overview
