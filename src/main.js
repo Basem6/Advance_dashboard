@@ -494,3 +494,47 @@ setTimeout(() => {
 }, 0);
     }
 }
+export function click_modal(){
+        let modal = document.querySelector(".modal");
+        let closeModal = document.querySelector("#closeModal");
+        let btn = document.querySelector(".add-application");
+        let create_btn = document.querySelector("#create");
+        btn.addEventListener("click",function(){
+            modal.style.cssText="opacity:1;"
+        })
+        closeModal.addEventListener("click",function(){
+            modal.style.cssText="opacity: 0;scale:0"
+            setTimeout(() => {
+                    delete_input()
+            }, 400);
+        })
+        create_btn.addEventListener("click",function(){
+                let Months = ["Jan","Fep","Mar","Apr","May","Jun","Jul","agu","Sep","Oct","Nov","Dec"];
+                let data=new Date()
+                let current_date = `${Months[data.getMonth()]} ${data.getDate()},${data.getFullYear()}`;
+                if(document.querySelector(".input_Major").value!="" && document.querySelector(".input_name").value!=""){
+                    let inner_input_Major = document.querySelector(".input_Major").value.trim();
+                    let inner_input_Name = document.querySelector(".input_name").value.trim();
+                    let choice_document = document.querySelector("#statue2").value;
+                    let choice_statue = document.querySelector("#statue").value;
+                    delete_input()
+                    modal.style.cssText="opacity: 0;scale:0"
+                    data_person.push({id:data_person[(data_person.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,statue:choice_statue});
+                    document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
+                    setTimeout(() => {
+                        document.querySelector(".meesage").style.cssText="opacity:0;display:none;"
+                    }, 1400);
+                    get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+                }
+                else{
+                    document.querySelector(".meesage2").style.cssText="opacity:1;display:block;"
+                    setTimeout(() => {
+                        document.querySelector(".meesage2").style.cssText="opacity:0;display:none;"
+                    }, 2000);
+                }
+        })
+}
+export function delete_input(){
+    document.querySelector(".input_Major").value=""
+    document.querySelector(".input_name").value=""
+}
