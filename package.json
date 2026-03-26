@@ -23,9 +23,10 @@
     "@syncfusion/ej2-calendars": "^33.1.44",
     "@syncfusion/ej2-charts": "^33.1.44",
     "@tailwindcss/vite": "^4.2.2",
+    "choices.js": "^11.2.1",
     "tailwindcss": "^4.2.2"
   },
   "engines": {
-  "node": "24.x"
-   }
+    "node": "24.x"
+  }
 }

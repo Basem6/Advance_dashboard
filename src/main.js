@@ -2,6 +2,8 @@ import { registerLicense } from '@syncfusion/ej2-base';
 registerLicense("Ngo9BigBOggjHTQxAR8/V1JHaF5cWWdCekx3Qnxbf1x2ZFZMZV1bRHFPIiBoS35RcEVgW3pecXFVQmlbU0N2VEFe");
 import './addclick.js'
 import '/index.css'
+import Choices from 'choices.js';
+import 'choices.js/public/assets/styles/choices.min.css';
 import {
     Chart,
     SplineSeries,
