@@ -10,6 +10,8 @@ let data_person=[
     {id:472050,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
     {id:472051,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
     {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
+    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
 ]
 let data_admin = [
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Reviewing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
