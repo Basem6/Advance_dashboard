@@ -26,7 +26,6 @@ let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
 import { render } from './main.js';
 import { click_modal } from './main.js';
-import { delete_input } from './main.js';
 let main = document.querySelector(".main");
 array_nav.forEach((e)=>{
     e.addEventListener("click",function(){
@@ -161,7 +160,7 @@ async function addeven_input() {
             filter(e)
         })
     })
-    click_modal()
+    click_modal(get_data,data_person,delete_input)
 
 }
 async function document_page() {
@@ -202,4 +201,8 @@ function remove_items(){
             e.parentElement.parentElement.remove();
         })
     })
+}
+function delete_input(){
+    document.querySelector(".input_Major").value=""
+    document.querySelector(".input_name").value=""
 }

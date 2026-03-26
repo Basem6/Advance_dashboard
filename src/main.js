@@ -494,22 +494,7 @@ setTimeout(() => {
 }, 0);
     }
 }
-let data_person=[
-    {id:472042,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472043,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
-    {id:472044,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472045,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
-    {id:472046,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
-    {id:472047,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472048,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
-    {id:472049,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472050,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
-    {id:472051,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-]
-export function click_modal(){
+export function click_modal(fun,array,fun2){
         let modal = document.querySelector(".modal");
         let closeModal = document.querySelector("#closeModal");
         let btn = document.querySelector(".add-application");
@@ -520,7 +505,7 @@ export function click_modal(){
         closeModal.addEventListener("click",function(){
             modal.style.cssText="opacity: 0;scale:0"
             setTimeout(() => {
-                    delete_input()
+                    fun2()
             }, 400);
         })
         create_btn.addEventListener("click",function(){
@@ -532,14 +517,14 @@ export function click_modal(){
                     let inner_input_Name = document.querySelector(".input_name").value.trim();
                     let choice_document = document.querySelector("#statue2").value;
                     let choice_statue = document.querySelector("#statue").value;
-                    delete_input()
+                    fun2()
                     modal.style.cssText="opacity: 0;scale:0"
-                    data_person.push({id:data_person[(data_person.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,statue:choice_statue});
+                    array.push({id:array[(array.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,statue:choice_statue});
                     document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
                     setTimeout(() => {
                         document.querySelector(".meesage").style.cssText="opacity:0;display:none;"
                     }, 1400);
-                    get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+                    fun(array,document.querySelector(".body_table"),"eye","pencil")
                 }
                 else{
                     document.querySelector(".meesage2").style.cssText="opacity:1;display:block;"
@@ -548,8 +533,4 @@ export function click_modal(){
                     }, 2000);
                 }
         })
-}
-export function delete_input(){
-    document.querySelector(".input_Major").value=""
-    document.querySelector(".input_name").value=""
 }
