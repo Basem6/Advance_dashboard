@@ -56,6 +56,12 @@ array_nav.forEach((e)=>{
                 if(e.dataset.link=="Documents"){
                 document_page()
                 }
+                if(e.dataset.link=="Reports"){
+                get_page("reports.html",render)
+                }
+                if(e.dataset.link=="Scholars"){
+                get_page("scholars.html",render)
+                }
                 if(e.dataset.link=="Settings"){
                 settings_page()
                 }
