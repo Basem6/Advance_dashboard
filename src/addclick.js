@@ -10,8 +10,6 @@ let data_person=[
     {id:472050,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
     {id:472051,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
     {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
 ]
 let data_admin = [
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Reviewing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
@@ -20,7 +18,6 @@ let data_admin = [
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Approved",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Approved",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
 ]
 let admin_setting = [
     {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Active"},
@@ -135,6 +132,7 @@ function get_data(array, place , icon1, icon2){
                             let pencilBtn = document.createElement("button");
                             if(array==data_admin){
                                 eyeBtn.className = `fa-solid fa-${icon1} mr-2 text-red-400`;
+                                if(icon1 =="trash-can"){ eyeBtn.classList.add("delete")}
                                 pencilBtn.className = `fa-solid fa-${icon2} mr-2 text-green-600`;
                             }else{
                                 eyeBtn.className = `fa-regular fa-${icon1}  mr-2 text-blue-500/80`;
