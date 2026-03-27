@@ -32,7 +32,7 @@ let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
 import { render } from './main.js';
 import { click_modal } from './main.js';
-let main = document.querySelector(".main");
+let main = document.querySelector(".content_dy");
 array_nav.forEach((e)=>{
     e.addEventListener("click",function(){
         array_nav.forEach((el)=>{
