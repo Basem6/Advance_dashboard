@@ -1,0 +1,85 @@
+            <header class="flex justify-between items-start p-3 mt-0.5 gap-2 min-w-full max-w-full flex-wrap nav-top">
+                <div class="title-left w-1/2 text-2xl"><span class="font-bold">Scholar Track Hub</span>:Settings</div>
+                <div class="search w-36 h-7 relative">
+                    <span class="fa-solid fa-search absolute right-3 text-gray-400 text-sm top-1/2 -translate-y-1/2"></span>
+                    <input type="text" name="" placeholder="Search" id="" class="bg-[#13161b] rounded-lg border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] w-full h-full pr-11">
+                </div>
+                <div class="user-admin ml-2 flex flex-wrap gap-3 items-start md:hidden sm:hidden lg:flex">
+                    <div class="relative bell"><span class="fa-regular fa-bell"></span></div>
+                    <div class="admin-details flex gap-3 relative bottom-1 items-start">
+                        <div class="image w-9 h-9"><img src="/assests/photo/admin-photo.webp" alt="" loading="lazy" class="w-full h-full rounded-full"></div>
+                        <div class="name flex gap-2 items-center">
+                            <div class="flex flex-col items-center">
+                                <span>Dr. Evein Head</span>
+                                <span class="text-gray-400 text-sm">Admin</span>
+                            </div>
+                            <span class="fa-solid fa-angle-down"></span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="px-3 min-w-full mt-2 pb-16">
+                <div class="cards flex flex-wrap gap-4">
+                    <div class="card bg-[#0f1219]  w-150 p-4 h-72 shadow-md grow">
+                        <div class="flex  items-center gap-3 h-3/4">
+                            <div class="admin-image w-32 h-32 relative">
+                                    <img src="/assests/photo/admin-photo.webp" alt="Admin Profile" class="w-full h-full rounded-full border-2 border-[#0f1219] object-cover">
+                            </div> 
+                            <div class="ml-3 felx flex-col items-start">
+                                    <h3 class="text-3xl  text-white tracking-wide">Dr. Evein Head</h3>
+                                    <p class="font-light text-xl tracking-wide">Email:dr.reen@gmail.com</p>
+                                    <p class="font-light text-xl tracking-wide">Role:(Admin)</p>
+                                <div class="btns felx gap-5 min-w-full  relative top-12">
+                                    <button class="bg-transparent px-4 py-1 border-gray-400/40 border-2 border-solid rounded-md mr-1"><span class="fa-solid fa-pen mr-2 text-sky-300"></span>Eidt Profile</button>
+                                    <button class="px-4 py-1 border-gray-400/40 border-2 border-solid rounded-md"><span class="fa-solid fa-key mr-2 text-red-300"></span>Change Passward</button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="card bg-[#0f1219]  w-150 p-4 h-72 shadow-md grow">
+                        <h2 class="text-2xl text-white mb-2.5 flex items-center">
+                            <span class="fa-solid fa-sliders mr-2 text-[#1c4680] text-xl"></span>
+                            System Settings
+                        </h2>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex justify-between items-center h-14 p-2 bg-[#13161b] hover:bg-[#191d24] rounded-lg text-xs transition-colors">
+                                <span class="text-white text-xl">Email Notifications</span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-600 rounded-full peer peer-checked:bg-gradient-to-r peer-checked:from-[#78abf2] peer-checked:to-[#5b9efcbb] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-4 transition-all"></div>
+                                </label>
+                            </div>
+                            <div class="flex justify-between items-center p-2 h-14 bg-[#13161b] hover:bg-[#191d24] rounded-lg text-xs transition-colors">
+                                <span class="text-white text-xl">Two-Factor Auth</span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-600 rounded-full peer peer-checked:bg-gradient-to-r peer-checked:from-[#78abf2] peer-checked:to-[#5b9efcbb] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-4 transition-all"></div>
+                                </label>
+                            </div>
+                            <div class="flex justify-between items-center p-2 h-14 bg-[#13161b] hover:bg-[#191d24] rounded-lg text-xs transition-colors">
+                                <span class="text-white text-xl">Two-Factor Auth</span>
+                                <label class="relative inline-flex items-center cursor-pointer">
+                                    <input type="checkbox" class="sr-only peer" checked>
+                                    <div class="w-9 h-5 bg-gray-600 rounded-full peer peer-checked:bg-gradient-to-r peer-checked:from-[#78abf2] peer-checked:to-[#5b9efcbb] after:content-[''] after:absolute after:top-0.5 after:left-0.5 after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:after:translate-x-4 transition-all"></div>
+                                </label>
+                            </div>
+                            </div>
+                    </div>
+                    <div class="card bg-[#0f1219]  min-w-fill py-2 px-4 min-h-72 shadow-md grow">
+                        <table class="dashboard-table">
+                                    <thead>
+                                        <tr>
+                                            <th class="col-id ">Admin Name</th>
+                                            <th class="col-name">Email</th>
+                                            <th class="col-major">Role</th>
+                                            <th class="col-doc">Last login</th>
+                                            <th class="col-date">Statue</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="body_table_d">
+                                    </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>

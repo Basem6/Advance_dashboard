@@ -22,6 +22,15 @@ let data_admin = [
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
     {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Approved",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
 ]
+let admin_setting = [
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Active"},
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Active"},
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
+    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
+
+]
 let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
 import { render } from './main.js';
@@ -47,6 +56,9 @@ array_nav.forEach((e)=>{
                 if(e.dataset.link=="Documents"){
                 document_page()
                 }
+                if(e.dataset.link=="Settings"){
+                settings_page()
+                }
     })
     })
 });
@@ -59,7 +71,6 @@ async function get_page(url,call) {
 }
 function get_data(array, place , icon1, icon2){
             try{
-                        // let place = document.querySelector(".body_table");
                         place.innerHTML=""
                         let fragment = document.createDocumentFragment()
                         for(let i=0;i < array.length;i++){
@@ -100,9 +111,9 @@ function get_data(array, place , icon1, icon2){
                                     div2.appendChild(txt)
                                     div1.classList.add("none")
                                     if(div2.innerHTML=="Reviewing"){div2.classList.add("Reviewing")}
-                                    if(div2.innerHTML=="Need Document"){div2.classList.add("Need")}
+                                    if(div2.innerHTML=="Need Document" || div2.innerHTML=="Adle"){div2.classList.add("Need")}
                                     if(div2.innerHTML=="Pending Document"){div2.classList.add("Pending-Document")}
-                                    if(div2.innerHTML=="Interview Scheduled" || div2.innerHTML=="Approved"){div2.classList.add("Scheduled")}
+                                    if(div2.innerHTML=="Interview Scheduled" || div2.innerHTML=="Approved" || div2.innerHTML=="Active" ){div2.classList.add("Scheduled")}
                                     if(div2.innerHTML=="Missing"){div2.classList.add("Missing")}
                                     td.appendChild(div1)
                                     td.appendChild(div2)
@@ -118,12 +129,11 @@ function get_data(array, place , icon1, icon2){
                             let pencilBtn = document.createElement("button");
                             if(array==data_admin){
                                 eyeBtn.className = `fa-solid fa-${icon1} mr-2 text-red-400`;
-                                eyeBtn.classList.add("delete")
                                 pencilBtn.className = `fa-solid fa-${icon2} mr-2 text-green-600`;
                             }else{
                                 eyeBtn.className = `fa-regular fa-${icon1}  mr-2 text-blue-500/80`;
+                                if(icon1 =="trash-can"){ eyeBtn.classList.add("delete")}
                                 pencilBtn.className = `fa-solid fa-${icon2} mr-2 text-blue-500/80`;
-
                             }
                             td.appendChild(eyeBtn);
                             td.appendChild(pencilBtn);
@@ -205,4 +215,9 @@ function remove_items(){
 function delete_input(){
     document.querySelector(".input_Major").value=""
     document.querySelector(".input_name").value=""
+}
+async function settings_page() {
+    await get_page("setting.html",render)
+    get_data(admin_setting, document.querySelector(".body_table_d"),"trash-can","pencil")
+    remove_items()
 }
