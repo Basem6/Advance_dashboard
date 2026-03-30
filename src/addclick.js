@@ -1,9 +1,9 @@
 let data_person=[];
 let data_admin=[];
 let admin_setting=[];
-fetch("./public/assests/main.json").then((response)=>{
+fetch("/data.json").then((response)=>{
     return response.json()
-    .then((data)=>{
+.then((data)=>{
         let data_person1 = data.person;
         let data_admin1 = data.admin;
         data_person=data_person.concat(data_person1);
@@ -13,7 +13,8 @@ fetch("./public/assests/main.json").then((response)=>{
     })
 }).catch((e)=>{
     alert("erorr in fetch data")
-    console.log(e)})
+    console.log(e)
+})
 let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
 import { render } from './main.js';
@@ -93,14 +94,14 @@ function get_data(array, place , icon1, icon2){
                                     td.className="flex items-center gap-2"
                                     tr.appendChild(td)
                                 }
-                                if(array_key[e]=="statue"){
+                                if(array_key[e]=="status"){
                                     let div1 = document.createElement("div")
                                     let div2 = document.createElement("div")
                                     div1.appendChild(document.createTextNode("raawrfwaa"))
                                     div2.appendChild(txt)
                                     div1.classList.add("none")
                                     if(div2.innerHTML=="Reviewing"){div2.classList.add("Reviewing")}
-                                    if(div2.innerHTML=="Need Document" || div2.innerHTML=="Adle"){div2.classList.add("Need")}
+                                    if(div2.innerHTML=="Need Document" || div2.innerHTML=="Idle"){div2.classList.add("Need")}
                                     if(div2.innerHTML=="Pending Document"){div2.classList.add("Pending-Document")}
                                     if(div2.innerHTML=="Interview Scheduled" || div2.innerHTML=="Approved" || div2.innerHTML=="Active" ){div2.classList.add("Scheduled")}
                                     if(div2.innerHTML=="Missing"){div2.classList.add("Missing")}
@@ -137,7 +138,7 @@ function get_data(array, place , icon1, icon2){
                     }
             catch(e)
                     {
-                        alert("erorr in get data")
+                        alert("erorr in   get data")
                         console.log(e)
             }
 }
