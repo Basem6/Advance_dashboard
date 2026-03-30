@@ -1,33 +1,19 @@
-let data_person=[
-    {id:472042,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472043,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
-    {id:472044,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472045,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
-    {id:472046,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
-    {id:472047,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472048,person:"Basem Mahomud",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2023",statue:"Pending Document"},
-    {id:472049,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-    {id:472050,person:"Jon Basem",Major:"Doctor",Scholar:"Merit",Date:"Jan 1,2024",statue:"Need Document"},
-    {id:472051,person:"Maged Ali",Major:"Engineering",Scholar:"Merit",Date:"Fep 14,2024",statue:"Interview Scheduled"},
-    {id:472052,person:"Jon Maged",Major:"Engineering",Scholar:"Merit",Date:"Jan 14,2024",statue:"Reviewing"},
-]
-let data_admin = [
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Reviewing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Approved",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Approved",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-    {file_type:"Transcript",file_name:"transcript_2023_pdf",statue:"Missing",Deadline:"01/02/2023",admin_name:"EvelyenReed"},
-]
-let admin_setting = [
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Active"},
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Active"},
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
-    {Admin_name:"James param",Email:"james@gmail,com" ,Role:"Super Adimin" ,lastlogin:"12 Jan,2022",statue:"Adle"},
-
-]
+let data_person=[];
+let data_admin=[];
+let admin_setting=[];
+fetch("./public/assests/main.json").then((response)=>{
+    return response.json()
+    .then((data)=>{
+        let data_person1 = data.person;
+        let data_admin1 = data.admin;
+        data_person=data_person.concat(data_person1);
+        data_admin=data_admin.concat(data_admin1);
+        let admin_setting1 = data.setting;
+        admin_setting = admin_setting.concat(admin_setting1);
+    })
+}).catch((e)=>{
+    alert("erorr in fetch data")
+    console.log(e)})
 let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
 import { render } from './main.js';
@@ -42,7 +28,7 @@ array_nav.forEach((e)=>{
         if(document.startViewTransition)
             document.startViewTransition(function(){
                 if(e.dataset.link=="Application"){ 
-                addeven_input()
+                application_page()
                 }
                 if(e.dataset.link=="Dashboard"){
                 get_page("test.html",render)
@@ -130,14 +116,17 @@ function get_data(array, place , icon1, icon2){
                             let td = document.createElement("td");
                             let eyeBtn = document.createElement("button");
                             let pencilBtn = document.createElement("button");
-                            if(array==data_admin){
-                                eyeBtn.className = `fa-solid fa-${icon1} mr-2 text-red-400`;
-                                if(icon1 =="trash-can"){ eyeBtn.classList.add("delete")}
-                                pencilBtn.className = `fa-solid fa-${icon2} mr-2 text-green-600`;
-                            }else{
-                                eyeBtn.className = `fa-regular fa-${icon1}  mr-2 text-blue-500/80`;
-                                if(icon1 =="trash-can"){ eyeBtn.classList.add("delete")}
-                                pencilBtn.className = `fa-solid fa-${icon2} mr-2 text-blue-500/80`;
+                            if(icon1=="trash-can" && icon2=="upload"){
+                                eyeBtn.className="fa-solid fa-trash-can mr-2 text-red-400 delete"
+                                pencilBtn.className="fa-solid fa-upload mr-2 text-green-600"
+                            }
+                            if(icon1=="eye" && icon2=="pencil"){
+                                eyeBtn.className="fa-solid fa-eye mr-2 text-blue-500/80"
+                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80"
+                            }
+                            if(icon1=="trash-can" && icon2=="pencil"){
+                                eyeBtn.className="fa-solid fa-trash-can mr-2 text-blue-500/80 delete"
+                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80"
                             }
                             td.appendChild(eyeBtn);
                             td.appendChild(pencilBtn);
@@ -152,36 +141,52 @@ function get_data(array, place , icon1, icon2){
                         console.log(e)
             }
 }
-async function add() {
-                    await get_page("application.html",render);
-                    await get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
-}
-async function filter(input) {
-                    let body_table = document.querySelector(".body_table");
-                    body_table.innerHTML=""
-                    let prop = input.dataset.category;
-                    let sorted_array = data_person.slice().sort((a, b) => {
-                    let aMatch = a[prop].toLowerCase().startsWith(input.value.toLowerCase());
-                    let bMatch = b[prop].toLowerCase().startsWith(input.value.toLowerCase());
+function filter(target, array ,place , icon1, icon2){
+                    place.innerHTML=""
+                    let prop = target.dataset.category;
+                    let sorted_array = array.slice().sort((a, b) => {
+                    if(!target.dataset.type){
+                        let aMatch = a[prop].toLowerCase().startsWith(target.value.toLowerCase());
+                        let bMatch = b[prop].toLowerCase().startsWith(target.value.toLowerCase());
+                        return bMatch - aMatch;
+                    }else{
+                    if(prop == "Deadline"){
+                        if(target.innerHTML=="The Newest"){
+                            return new Date(b[prop]) - new Date(a[prop]);
+                        }else
+                            return new Date(a[prop]) - new Date(b[prop]);
+                    }
+                    else{
+                    let aMatch = a[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
+                    let bMatch = b[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
                     return bMatch - aMatch;
-                });
-                    get_data(sorted_array,document.querySelector(".body_table"),"eye","pencil")
+                    }
+                }
+                    });
+                    get_data(sorted_array,place, icon1, icon2)
 }
-async function addeven_input() {
-    await add()
+async function application_page() {
+    await get_page("application.html",render);
+    await get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
     document.querySelectorAll(".input").forEach((e)=>{ 
         e.addEventListener("input",function(){
-            filter(e)
+            filter(e,data_person,document.querySelector(".body_table"),"eye","pencil")
         })
     })
     click_modal(get_data,data_person,delete_input)
-
 }
 async function document_page() {
     await get_page("documents.html",render)
     get_data(data_admin, document.querySelector(".body_table_d"),"trash-can","upload")
     click_select()
     remove_items()
+    let btns_filter = document.querySelectorAll(".btn_filter");
+    btns_filter.forEach((e)=>{
+        e.addEventListener("click",function(el){
+            filter(e,data_admin,document.querySelector(".body_table_d"), "trash-can" ,"upload")
+            
+        })
+    })
 }
 function click_select() {
     let selects  = document.querySelectorAll(".select");
