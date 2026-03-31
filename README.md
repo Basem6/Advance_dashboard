@@ -104,7 +104,7 @@ project/
 
 ## 🌐 Live Demo
 
-👉 https://advance-dashboard-lu90385fo-basem6s-projects.vercel.app/
+👉https://advance-dashboard-aiuxo1ytq-basem6s-projects.vercel.app/
 
 ---
 
