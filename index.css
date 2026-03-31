@@ -362,7 +362,7 @@ tbody > tr:last-child > td {
 .rotate {
   transform: rotate(180deg);
 }
-input {
+.dark input {
   outline: none;
   border: none;
 }

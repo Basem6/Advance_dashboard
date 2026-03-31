@@ -519,7 +519,7 @@ export function click_modal(fun,array,fun2){
                     let choice_statue = document.querySelector("#statue").value;
                     fun2()
                     modal.style.cssText="opacity: 0;scale:0"
-                    array.push({id:array[(array.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,statue:choice_statue});
+                    array.push({id:array[(array.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,status:choice_statue});
                     document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
                     setTimeout(() => {
                         document.querySelector(".meesage").style.cssText="opacity:0;display:none;"
