@@ -534,3 +534,45 @@ export function click_modal(fun,array,fun2){
                 }
         })
 }
+
+// ============ THEME TOGGLE ============
+const initTheme = () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const htmlElement = document.documentElement;
+    
+    if (savedTheme === 'light') {
+        htmlElement.classList.remove('dark');
+        htmlElement.classList.add('light');
+        const checkbox = document.querySelector('.bb8-toggle__checkbox');
+        if (checkbox) checkbox.checked = true;
+    } else {
+        htmlElement.classList.add('dark');
+        htmlElement.classList.remove('light');
+        const checkbox = document.querySelector('.bb8-toggle__checkbox');
+        if (checkbox) checkbox.checked = false;
+    }
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTheme);
+} else {
+    initTheme();
+}
+
+const themeToggle = document.querySelector('.bb8-toggle__checkbox');
+if (themeToggle) {
+    themeToggle.addEventListener('change', () => {
+        const htmlElement = document.documentElement;
+        
+        if (themeToggle.checked) {
+            htmlElement.classList.remove('dark');
+            htmlElement.classList.add('light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            htmlElement.classList.remove('light');
+            htmlElement.classList.add('dark');
+            
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+}

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="index.css"> -->
     <link rel="stylesheet" href="fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.css">
 </head>
-<body class="bg-[#03030b] min-h-screen h-auto">
-    <div class="dashboard flex bg-[#03030b] minh-full h-auto w-full pb-4 relative">
-        <aside class="bg-[#131419] aside md:max-w-[20%]  lg:w-[15%] h-full py-7 px-2 flex flex-col items-start gap-5 fixed ">
+<body class="bg-[#f8f9fa] dark:bg-[#03030b] min-h-screen h-auto">
+    <div class="dashboard flex bg-[#f8f9fa] dark:bg-[#03030b] minh-full h-auto w-full pb-4 relative">
+        <aside class="bg-[#ffffff] dark:bg-[#131419] border-r border-gray-200 dark:border-transparent aside md:max-w-[20%]  lg:w-[15%] h-full py-7 px-2 flex flex-col items-start gap-5 fixed">
             <div class="logo w-16 h-16 relative left-1/2 -translate-x-1/2 scale-125 mb-3">
                 <img src="/assests/icons/logo.svg" alt="" class="drop-shadow-2xl shadow-[#78abf2]">
             </div>
@@ -42,16 +42,16 @@
                 <span>Settings</span>
             </div>
         </aside>
-        <main class="main text-gray-300 md:max-w-[80%]  lg:min-w-[85%] h-auto md:ml-[20%] lg:ml-[15%] relative ">
-            <header class="flex justify-between items-start px-3 pt-3 pb-1.5 mt-0.5  gap-2 min-w-full max-w-full flex-wrap nav-top">
-                <div class="title-left w-1/2 text-2xl"><span class="font-bold">Scholar Track Hub</span>:Scholarship Monitoring Dashboard</div>
-                <div class="search w-36  h-7 relative ">
-                    <span class="fa-solid fa-search absolute right-3 text-gray-400 text-sm top-1/2 -translate-y-1/2"></span>
-                    <input type="text" name="" placeholder="Search" id="" class="bg-[#13161b] rounded-lg border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] w-full h-full pr-11">
+        <main class="main text-gray-800 dark:text-gray-300 md:max-w-[80%]  lg:min-w-[85%] h-auto md:ml-[20%] lg:ml-[15%] relative">
+            <header class="flex justify-between items-start px-3 pt-3 pb-1.5 mt-0.5 gap-2 min-w-full max-w-full flex-wrap nav-top border-b border-gray-200 dark:border-transparent">
+                <div class="title-left w-1/2 text-2xl text-gray-900 dark:text-gray-100"><span class="font-bold">Scholar Track Hub</span>:Scholarship Monitoring Dashboard</div>
+                <div class="search w-36  h-7 relative">
+                    <span class="fa-solid fa-search absolute right-3 text-gray-500 dark:text-gray-400 text-sm top-1/2 -translate-y-1/2"></span>
+                    <input type="text" name="" placeholder="Search" id="" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-lg outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] w-full h-full pr-11">
                 </div>
                 <div class="mode">
                     <label class="bb8-toggle">
-                        <input class="bb8-toggle__checkbox" type="checkbox" checked>
+                        <input class="bb8-toggle__checkbox theme" type="checkbox"  >
                         <div class="bb8-toggle__container">
                             <div class="bb8-toggle__scenery">
                             <div class="bb8-toggle__star"></div>
@@ -84,64 +84,64 @@
                         </div>
                     </label>
                 </div>
-                <div class="user-admin   ml-2 flex flex-wrap gap-3 items-start md:hidden sm:hidden lg:flex">
-                    <div class="relative bell"><span class="fa-regular fa-bell"></span></div>
+                <div class="user-admin ml-2 flex flex-wrap gap-3 items-start md:hidden sm:hidden lg:flex">
+                    <div class="relative bell"><span class="fa-regular fa-bell text-gray-700 dark:text-gray-300"></span></div>
                     <div class="admin-details flex gap-3 relative bottom-1 items-start">
                         <div class="image w-9 h-9"><img src="/assests/photo/admin-photo.webp" alt="" loading="lazy" class="w-full h-full rounded-full"></div>
-                        <div class="name flex gap-2 items-center">
+                        <div class="name flex gap-2 items-center text-gray-800 dark:text-gray-300">
                             <div class="flex flex-col items-center">
                                 <span>Dr. Evein Head</span>
-                                <span class="text-gray-400 text-sm">Admin</span>
+                                <span class="text-gray-600 dark:text-gray-400 text-sm">Admin</span>
                             </div>
-                            <span class="fa-solid fa-angle-down"></span>
+                            <span class="fa-solid fa-angle-down text-gray-700 dark:text-gray-300"></span>
                         </div>
                     </div>
                 </div>
             </header>
             <div class="relative flex flex-col gap-2.5 content_dy">
                 <section class="px-3 min-w-full">
-                    <div class="title text-lg max-w-full">Scholar Summary Cards</div>
-                    <div class="cards flex flex-wrap justify-between gap-3  mt-1 ">
-                        <div class="card  px-2 pt-1 py-3  min-h-16 bg-[#0f1219] sm:w-52 md:w-72 grow ">
-                            <div class="top flex justify-between items-center  text-gray-200"><span>Active Scholars</span><span class="fa-regular fa-user  text-[#92bcf8] "></span></div>
-                            <div class="center font-bold text-2xl">1,245</div>
+                    <div class="title text-lg max-w-full text-gray-900 dark:text-gray-100">Scholar Summary Cards</div>
+                    <div class="cards flex flex-wrap justify-between gap-3 mt-1">
+                        <div class="card px-2 pt-1 py-3 min-h-16 bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent sm:w-52 md:w-72 grow">
+                            <div class="top flex justify-between items-center text-gray-700 dark:text-gray-200"><span>Active Scholars</span><span class="fa-regular fa-user text-[#92bcf8]"></span></div>
+                            <div class="center font-bold text-2xl text-gray-900 dark:text-white">1,245</div>
                         </div>
-                        <div class="card bg-[#0f1219] px-2 pt-1 py-3 sm:w-52 md:w-72 min-h-16 grow">
-                            <div class="top flex justify-between items-center  text-gray-200"><span>Application Reviewing</span><span class="fa-regular fa-newspaper  text-[#92bcf8]"></span></div>
-                            <div class="center font-bold text-2xl ">310</div>
+                        <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent px-2 pt-1 py-3 sm:w-52 md:w-72 min-h-16 grow">
+                            <div class="top flex justify-between items-center text-gray-700 dark:text-gray-200"><span>Application Reviewing</span><span class="fa-regular fa-newspaper text-[#92bcf8]"></span></div>
+                            <div class="center font-bold text-2xl text-gray-900 dark:text-white">310</div>
                         </div>
-                        <div class="card bg-[#0f1219] px-2 pt-1  py-3 sm:w-52 md:w-72 min-h-16  grow">
-                            <div class="top flex justify-between items-center  text-gray-200"><span>Total funds Alocatted</span><span class="fa-solid fa-sack-dollar  text-[#92bcf8]"></span></div>
-                            <div class="center font-bold text-2xl ">$15.6M</div>
+                        <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent px-2 pt-1 py-3 sm:w-52 md:w-72 min-h-16 grow">
+                            <div class="top flex justify-between items-center text-gray-700 dark:text-gray-200"><span>Total funds Alocatted</span><span class="fa-solid fa-sack-dollar text-[#92bcf8]"></span></div>
+                            <div class="center font-bold text-2xl text-gray-900 dark:text-white">$15.6M</div>
                         </div>
-                        <div class="card-last bg-[#0f1219] px-2 pt-1 py-3  sm:w-52 md:w-72 min-h-16 grow ">
-                            <div class="top flex justify-between items-center"><span>Upcoming Renwels</span><span class="fa-solid fa-arrows-rotate text-[#8c7af3]"></span></div>
-                            <div class="center font-bold text-2xl ">45</div>
+                        <div class="card-last bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent px-2 pt-1 py-3 sm:w-52 md:w-72 min-h-16 grow">
+                            <div class="top flex justify-between items-center text-gray-700 dark:text-gray-200"><span>Upcoming Renwels</span><span class="fa-solid fa-arrows-rotate text-[#8c7af3]"></span></div>
+                            <div class="center font-bold text-2xl text-gray-900 dark:text-white">45</div>
                         </div>
                     </div>
                 </section>
-                <main class="charts flex gap-2  px-3 min-w-full  flex-wrap  md:flex-col lg:flex-row ">
-                    <div id="chart" class=" py-1 bg-[#0f1219] rounded-lg lg:w-[49%] md:w-full min-h-64 max-h-fit text-xl font-semibold text-white grow">
+                <main class="charts flex gap-2 px-3 min-w-full flex-wrap md:flex-col lg:flex-row">
+                    <div id="chart" class="py-1 bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent rounded-lg lg:w-[49%] md:w-full min-h-64 max-h-fit text-xl font-semibold text-gray-900 dark:text-white grow">
                         <div class="flex justify-between">
                             <div class="px-2 text-xl font-semibold">Scholar Perfomance Overview</div>
-                            <div class="pr-4 pt-1 text-xs text-gray-300"> 
+                            <div class="pr-4 pt-1 text-xs text-gray-600 dark:text-gray-300">
                                 <div class="flex gap-1"><span class="fa-solid fa-circle text-xs text-blue-600"></span><span>cohort 2024</span></div>
                                 <div class="flex gap-1"><span class="fa-solid fa-circle text-xs text-violet-700"></span><span>cohort 2024</span></div>
                             </div>
-                        </div>      
-                        <p class="text-sm p-2 font-light text-gray-400">Gpa Trends Semesters</p>
+                        </div>
+                        <p class="text-sm p-2 font-light text-gray-500 dark:text-gray-400">Gpa Trends Semesters</p>
                     </div>
-                    <div class="pie-chart  bg-[#0f1219] rounded-lg lg:w-[49%] md:w-full min-h-64 max-h-fit text-xl font-semibold  text-white grow" id="chart2">
+                    <div class="pie-chart bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent rounded-lg lg:w-[49%] md:w-full min-h-64 max-h-fit text-xl font-semibold text-gray-900 dark:text-white grow" id="chart2">
                         <div class="px-2 pt-3">Funding Allocation by Type</div>
                     </div>
                 </main>
-                <footer class="w-full footer flex gap-2  px-3  lg:flex-row md:flex-col"> 
-                    <div class="left  px-2 py-0.5 bg-[#0f1219] lg:w-1/2  md:w-full rounded-lg min-h-40">
-                        <div class="title text-white flex justify-between">
+                <footer class="w-full footer flex gap-2 px-3 lg:flex-row md:flex-col">
+                    <div class="left px-2 py-0.5 bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent lg:w-1/2 md:w-full rounded-lg min-h-40">
+                        <div class="title text-gray-900 dark:text-white flex justify-between">
                             <span class="text-xl font-semibold">Recent Application Status</span>
-                            <span class="text-sm text-gray-200 mt-1">Renewal Alerts</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-200 mt-1">Renewal Alerts</span>
                         </div>
-                        <div class="content p-1 text-gray-300 w-full">
+                        <div class="content p-1 text-gray-700 dark:text-gray-300 w-full">
                             <div class="const flex justify-between w-full gap-1 items-start flex-wrap">
                                 <div class="min-w-fit text-start  flex flex-col justify-start  gap-1">
                                     <div>Aplication Name</div>
@@ -196,12 +196,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="right px-2 py-0.5 bg-[#0f1219] lg:w-1/2  md:w-full rounded-lg min-h-48">
-                        <div class="title text-white flex justify-between p-1">
+                    <div class="px-2 py-0.5 bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent lg:w-1/2 md:w-full rounded-lg min-h-48">
+                        <div class="title text-gray-900 dark:text-white flex justify-between p-1">
                             <span class="text-xl font-semibold">Scholar Document Tracking</span>
-                            <span class="text-sm text-gray-200 m-t">Renewal Alerts</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-200 m-t">Renewal Alerts</span>
                         </div>
-                        <div class="content p-1 text-gray-300 w-full">
+                        <div class="content p-1 text-gray-700 dark:text-gray-300 w-full">
                             <div class="const flex justify-between w-full gap-1 items-start flex-wrap ">
                                 <div class="min-w-fit text-start  flex flex-col justify-start  gap-1 ">
                                     <div>Scholar ID</div>

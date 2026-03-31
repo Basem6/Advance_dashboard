@@ -4,7 +4,9 @@ import { resolve } from 'path'
 
 export default defineConfig({
     plugins: [
-        tailwindcss(),
+        tailwindcss({
+            configPath: './tailwind.config.js'
+        }),
     ],
     build: {
         rollupOptions: {

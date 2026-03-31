@@ -1,271 +1,385 @@
 @import "tailwindcss";
-*{
-    user-select: none;
+@custom-variant dark (&:where(.dark, .dark *));
+* {
+  user-select: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+aside > div:not(:nth-child(1)) {
+  @apply text-gray-700 dark:text-gray-300 flex items-center py-1 px-1.5 pr-3 rounded-md transition-all duration-200 justify-start gap-2 text-lg hover:text-[#78abf2] hover:bg-gray-100 dark:hover:bg-[#396fb63f] hover:shadow-sm dark:hover:shadow-2xl hover:shadow-[#6ba5f52d];
+}
+aside > div:not(:nth-child(1)).active {
+  background-color: rgba(120, 171, 242, 0.1);
+  color: #78abf2;
+}
 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.dark aside > div:not(:nth-child(1)).active {
+  background-color: #396fb63f;
+  color: #78abf2;
 }
-aside > div:not(:nth-child(1)){
-    @apply text-gray-300 flex items-center  py-1 px-1.5 pr-3 rounded-md transition-all duration-200 justify-start gap-2 text-lg hover:text-[#78abf2] hover:bg-[#396fb63f] hover:shadow-2xl hover:shadow-[#6ba5f52d]
-} 
-aside > div:not(:nth-child(1)).active{
-    background-color:#396fb63f ;
-    color:#78abf2 ;
-}
-.bell::before{
-    content:'';
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: rgba(214, 37, 37, 0.913);
-    border-radius: 50%;
-    top: 4px;
-    right: 3px;
+.bell::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: rgba(214, 37, 37, 0.913);
+  border-radius: 50%;
+  top: 4px;
+  right: 3px;
 }
 .cards .card {
-    border: 2px solid;
-    border-image: linear-gradient(75deg, #0f1219,#0f1219,#0f1219, #92bcf8);
-    border-image-slice: 1;
-} 
+  border: 1px solid #e5e7eb;
+}
+
+.dark .cards .card {
+  border: 2px solid;
+  border-image: linear-gradient(75deg, #0f1219, #0f1219, #0f1219, #92bcf8);
+  border-image-slice: 1;
+}
 .card-last {
-    border: 2px solid;
-    border-image: linear-gradient(75deg, #0f1219,#0f1219,#0f1219, #b779f0);
-    border-image-slice: 1;
-} 
-.const > div > div:first-child{
-    color: #78abf2e4;
+  border: 1px solid #e5e7eb;
 }
-#chart2{
-    max-height: 330px;
-}
-#chart{
-    max-height: 330px;
-}
-#chart2 > div{
-    margin-top: -10px;
-}
-@media (max-width:768px) {
-    .user-admin{
-        display: none;
-    }
-    .aside{
-        display: none;
-    }
-    .main{
-        max-width: 100%;
-    }
-    .charts{
-        display: flex;
-        flex-direction: column;
-    }
-    .charts > div{
-        min-width: 100%;
-        max-width: 100%;
-    }
-    .footer{
-        display: flex;
-        flex-direction: column;
-    }
-    .footer> div{
-        min-width: 100%;
-        max-width: 100%;
-    }
-}
-.content_dy{
-    view-transition-name:main;
-}
-/* .nav-top{
-    view-transition-name: nav;
-} */
-.nav.active{
-    pointer-events: none;
-}
-::view-transition-old(main){
-    animation: fad1 500ms ease-in-out forwards;
 
+.dark .card-last {
+  border: 2px solid;
+  border-image: linear-gradient(75deg, #0f1219, #0f1219, #0f1219, #b779f0);
+  border-image-slice: 1;
 }
-::view-transition-new(main){
-    animation: fad2 500ms ease-in-out forwards;
+.const > div > div:first-child {
+  color: #78abf2;
+}
 
+.dark .const > div > div:first-child {
+  color: #78abf2e4;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#chart2 {
+  max-height: 330px;
+}
+#chart {
+  max-height: 330px;
+}
+#chart2 > div {
+  margin-top: -10px;
+}
+@media (max-width: 768px) {
+  .user-admin {
+    display: none;
+  }
+  .aside {
+    display: none;
+  }
+  .main {
+    max-width: 100%;
+  }
+  .charts {
+    display: flex;
+    flex-direction: column;
+  }
+  .charts > div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer > div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+.content_dy {
+  view-transition-name: main;
+}
+.nav.active {
+  pointer-events: none;
+}
+::view-transition-old(main) {
+  animation: fad1 500ms ease-in-out forwards;
+}
+::view-transition-new(main) {
+  animation: fad2 500ms ease-in-out forwards;
 }
 @keyframes fad1 {
-    from{
-        opacity: 1;
-        /* transform: scale(1); */
-    }
-    to{
-        opacity: 0;
-        /* transform: scale(0); */
-    }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 @keyframes fad2 {
-    from{
-        opacity: 0;
-        /* transform: scale(0); */
-    }
-    to{
-        opacity: 1;
-        /* transform: scale(1); */
-    }
-    
-} 
-
-.dashboard-table thead tr > th{
-    color: #4f92fcab
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.dashboard-table2 thead tr > th{
-    color: #94989ef1;
-    font-size: small;
+
+.dashboard-table thead tr > th {
+  color: #4f92fcab;
+}
+
+.light .dashboard-table thead tr > th {
+  color: #2563eb;
+}
+.dashboard-table2 thead tr > th {
+  color: #94989ef1;
+  font-size: small;
+}
+
+.light .dashboard-table2 thead tr > th {
+  color: #6b7280;
+  font-size: small;
 }
 .dashboard-table th,
 .dashboard-table td {
-    border-bottom: 1px solid #5d595975;
-    padding: 10px;
-    text-align: left;
-} 
-.dashboard-table2 th,
-.dashboard-tabl2 td {
-    border-bottom: 1px solid #5d595975;
-    padding: 10px;
-    text-align: left;
-}
-tbody > tr:last-child > td{
-    border-bottom: none;
-}
-.Pending-Document, .Need, .Scheduled, .Reviewing , .Missing{
-    max-width: fit-content;
-    border-radius: 7px;
-    padding: 1px 6px;
-}
-.Pending-Document{
-    background-color: rgba(0, 102, 255, 0.331);
-    color: rgb(103, 164, 255);
-}
-.Scheduled{
-    background-color: #2382538f;
-    color: rgba(46, 239, 197, 0.849);
-} 
-.Reviewing{
-    background-color: rgba(153, 37, 185, 0.477);
-    color: rgb(227, 128, 255);
-}
-.Need{
-    background-color: #bcb41650;
-    color: rgba(197, 228, 17, 0.801);
-}
-.Missing{
-    background-color: #ab322e94;
-    color: rgb(255, 122, 122);
-}
-.dashboard-table {
-    width: 100%;
-}
-.none{
-    display: none;
-}
-.col-actions{
-    display: flex;
-    gap: 10px;
-    margin-top: 12px;
+  border-bottom: 1px solid #5d595975;
+  padding: 10px;
+  text-align: left;
 }
 
-.modal{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        inset: 0;
-        left: 50%;
-        opacity: 0;
-        transform: translateX(-50%);
-        top: 20%;
-        max-width: 400px;
-        max-height: 400px;
-        transform-origin: center;
-        background-color: transparent;
-        transition: 300ms ease-in-out;
+.light .dashboard-table th,
+.light .dashboard-table td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+.dashboard-table2 th,
+.dashboard-tabl2 td {
+  border-bottom: 1px solid #5d595975;
+  padding: 10px;
+  text-align: left;
+}
+
+.light .dashboard-table2 th,
+.light .dashboard-tabl2 td {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+tbody > tr:last-child > td {
+  border-bottom: none;
+}
+.Pending-Document,
+.Need,
+.Scheduled,
+.Reviewing,
+.Missing {
+  max-width: fit-content;
+  border-radius: 7px;
+  padding: 1px 6px;
+}
+.Pending-Document {
+  background-color: rgba(0, 102, 255, 0.331);
+  color: rgb(255, 255, 255);
+}
+.dark .Pending-Document {
+  background-color: rgba(59, 131, 246, 0.219);
+  color: rgb(122, 164, 255);
+}
+.Scheduled {
+  background-color: #3ddf8e;
+  color: rgba(255, 255, 255, 0.984);
+}
+.dark .Scheduled {
+  background-color: rgba(44, 174, 131, 0.534);
+  color: rgb(127, 255, 214);
+} 
+.Reviewing {
+  background-color: rgba(179, 47, 216, 0.733);
+  color: rgb(255, 255, 255);
+}
+
+.dark .Reviewing {
+  background-color: rgba(146, 51, 234, 0.377);
+  color: rgb(198, 134, 255);
+}
+.Need {
+  background-color: rgba(215, 205, 12, 0.986);
+  color: rgba(255, 255, 255, 0.801);
+}
+
+.dark .Need {
+  background-color: rgba(212, 203, 24, 0.658);
+  color:  rgba(255, 211, 117, 0.943);
+}
+.Missing {
+  background-color: #c61d17ce;
+  color: rgb(255, 255, 255);
+}
+.dark .Missing {
+  background-color: rgba(142, 37, 37, 0.299);
+  color: rgb(255, 126, 126);
+}
+.dashboard-table {
+  width: 100%;
+}
+.none {
+  display: none;
+}
+.col-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  top: 20%;
+  max-width: 400px;
+  max-height: 400px;
+  transform-origin: center;
+  background-color: transparent;
+  transition: 300ms ease-in-out;
 }
 /* الأساس */
 .choices {
-    background-color: #111827 !important;
-    color: white;
-    border: 1px solid #374151;
-    }
-
-    /* الجزء الظاهر */
-    .choices__inner {
-    background-color: #111827 !important;
-    color: white;
-    border: none;
-    }
-
-    /* القائمة */
-    .choices__list--dropdown,
-    .choices__list[aria-expanded] {
-    background-color: #111827 !important;
-    color: white;
-    }
-
-    /* 🔥 أهم سطرين (بيشيلوا الأبيض) */
-    .choices__item,
-    .choices__item--selectable {
-    background-color: #111827 !important;
-    color: white !important;
-    }
-
-    /* hover */
-    .choices__item--choice.is-highlighted {
-    background-color: #1f2937 !important;
-    min-width: 100%;
-    }
-
-    /* selected item */
-    .choices__item--selectable.is-selected {
-        background-color: #111827 !important;
-    }
-
-    /* يغطي أي عنصر ممكن يعمل أبيض */
-    .choices__inner * {
-    background-color: transparent !important;
-    }
-    .choices__inner {
-    background-color: #111827 !important;  /* لون الخلفية كله */
-    border: none !important;            /* لو عايز تشيل البورد */
-    color: #fff;                        /* لون النص */
-    }
-
-    .choices__input {
-    background-color: #111827 !important;  
-    color: #fff !important; 
-    }
-
-    .choices__list--dropdown {
-    background-color: #111827 !important;
-    }
-.option.active{
-    background-color: rgb(3 7 18 / 0.7);
-    
+  background-color: #ffffff !important;
+  color: #1f2937;
+  border: 1px solid #e5e7eb !important;
 }
-.rotate{
-    transform: rotate(180deg);
+
+.dark .choices {
+  background-color: #111827 !important;
+  color: white;
+  border: 1px solid #374151;
 }
-input{
-    outline: none;
-    border: none;
+
+/* الجزء الظاهر */
+.choices__inner {
+  background-color: #ffffff !important;
+  color: #1f2937;
+  border: none;
 }
-input:focus{
-    outline: solid 2px  #5b9efcbb;
+
+.dark .choices__inner {
+  background-color: #111827 !important;
+  color: white;
+  border: none;
 }
-button{
-    cursor: pointer;
+
+/* القائمة */
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  background-color: #ffffff !important;
+  color: #1f2937;
+}
+
+.dark .choices__list--dropdown,
+.dark .choices__list[aria-expanded] {
+  background-color: #111827 !important;
+  color: white;
+}
+
+/* 🔥 أهم سطرين (بيشيلوا الأبيض) */
+.choices__item,
+.choices__item--selectable {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.dark .choices__item,
+.dark .choices__item--selectable {
+  background-color: #111827 !important;
+  color: white !important;
+}
+
+/* hover */
+.choices__item--choice.is-highlighted {
+  background-color: #f3f4f6 !important;
+  min-width: 100%;
+}
+
+.dark .choices__item--choice.is-highlighted {
+  background-color: #1f2937 !important;
+  min-width: 100%;
+}
+
+/* selected item */
+.choices__item--selectable.is-selected {
+  background-color: #f0f3f8 !important;
+}
+
+.dark .choices__item--selectable.is-selected {
+  background-color: #111827 !important;
+}
+
+/* يغطي أي عنصر ممكن يعمل أبيض */
+.choices__inner * {
+  background-color: transparent !important;
+}
+.choices__inner {
+  background-color: #ffffff !important;
+  border: none !important;
+  color: #1f2937;
+}
+
+.dark .choices__inner * {
+  background-color: transparent !important;
+}
+.dark .choices__inner {
+  background-color: #111827 !important;
+  border: none !important;
+  color: #fff;
+}
+
+.choices__input {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+
+.dark .choices__input {
+  background-color: #111827 !important;
+  color: #fff !important;
+}
+
+.choices__list--dropdown {
+  background-color: #ffffff !important;
+}
+
+.dark .choices__list--dropdown {
+  background-color: #111827 !important;
+}
+.option.active {
+  background-color: rgb(3 7 18 / 0.7);
+}
+.rotate {
+  transform: rotate(180deg);
+}
+input {
+  outline: none;
+  border: none;
+}
+input:focus {
+  outline: solid 2px #5b9efcbb;
+}
+button {
+  cursor: pointer;
 }
 .body_table2 > tr > td {
-    font-size: medium;
-    padding: 5px;
+  font-size: medium;
+  padding: 5px;
 }
-.delete{
-    cursor: pointer;
+.delete {
+  cursor: pointer;
 }
-/* From Uiverse.io by Galahhad */ 
+/* From Uiverse.io by Galahhad */
 /* REMASTERED */
 /* RTX-ON */
 /* completely redone toggle and droid */
@@ -357,7 +471,8 @@ button{
   margin-bottom: -0.188em;
   width: 2.5em;
   height: 1.688em;
-  background: -o-linear-gradient(
+  background:
+    -o-linear-gradient(
       transparent 0.063em,
       dimgray 0.063em 0.313em,
       transparent 0.313em 0.375em,
@@ -366,12 +481,21 @@ button{
       silver 1.313em 1.438em,
       transparent 1.438em
     ),
-    -o-linear-gradient(45deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
-    -o-linear-gradient(135deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
+    -o-linear-gradient(
+        45deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
+    -o-linear-gradient(
+        135deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
     -o-linear-gradient(var(--bb8-bg) 1.25em, transparent 1.25em);
-  background: -o-linear-gradient(
+  background:
+    -o-linear-gradient(
       transparent 0.063em,
       dimgray 0.063em 0.313em,
       transparent 0.313em 0.375em,
@@ -380,12 +504,21 @@ button{
       silver 1.313em 1.438em,
       transparent 1.438em
     ),
-    -o-linear-gradient(45deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
-    -o-linear-gradient(135deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
+    -o-linear-gradient(
+        45deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
+    -o-linear-gradient(
+        135deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
     -o-linear-gradient(var(--bb8-bg) 1.25em, transparent 1.25em);
-  background: -o-linear-gradient(
+  background:
+    -o-linear-gradient(
       transparent 0.063em,
       dimgray 0.063em 0.313em,
       transparent 0.313em 0.375em,
@@ -394,12 +527,21 @@ button{
       silver 1.313em 1.438em,
       transparent 1.438em
     ),
-    -o-linear-gradient(45deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
-    -o-linear-gradient(135deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
+    -o-linear-gradient(
+        45deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
+    -o-linear-gradient(
+        135deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
     -o-linear-gradient(var(--bb8-bg) 1.25em, transparent 1.25em);
-  background: -o-linear-gradient(
+  background:
+    -o-linear-gradient(
       transparent 0.063em,
       dimgray 0.063em 0.313em,
       transparent 0.313em 0.375em,
@@ -408,12 +550,21 @@ button{
       silver 1.313em 1.438em,
       transparent 1.438em
     ),
-    -o-linear-gradient(45deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
-    -o-linear-gradient(135deg, transparent 0.188em, var(--bb8-bg) 0.188em 1.25em, transparent
-          1.25em),
+    -o-linear-gradient(
+        45deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
+    -o-linear-gradient(
+        135deg,
+        transparent 0.188em,
+        var(--bb8-bg) 0.188em 1.25em,
+        transparent 1.25em
+      ),
     -o-linear-gradient(var(--bb8-bg) 1.25em, transparent 1.25em);
-  background: linear-gradient(
+  background:
+    linear-gradient(
       transparent 0.063em,
       dimgray 0.063em 0.313em,
       transparent 0.313em 0.375em,
@@ -447,47 +598,44 @@ button{
   position: absolute;
   width: 0.563em;
   height: 0.563em;
-  background: -o-radial-gradient(
-      0.25em 0.375em,
-      0.125em circle,
-      red,
-      transparent
-    ),
-    -o-radial-gradient(0.375em 0.188em, 0.063em circle, var(--bb8-bg) 50%, transparent
-          100%),
+  background:
+    -o-radial-gradient(0.25em 0.375em, 0.125em circle, red, transparent),
+    -o-radial-gradient(
+        0.375em 0.188em,
+        0.063em circle,
+        var(--bb8-bg) 50%,
+        transparent 100%
+      ),
     -o-linear-gradient(45deg, #000 0.188em, dimgray 0.313em 0.375em, #000 0.5em);
-  background: -o-radial-gradient(
-      0.25em 0.375em,
-      0.125em circle,
-      red,
-      transparent
-    ),
-    -o-radial-gradient(0.375em 0.188em, 0.063em circle, var(--bb8-bg) 50%, transparent
-          100%),
+  background:
+    -o-radial-gradient(0.25em 0.375em, 0.125em circle, red, transparent),
+    -o-radial-gradient(
+        0.375em 0.188em,
+        0.063em circle,
+        var(--bb8-bg) 50%,
+        transparent 100%
+      ),
     -o-linear-gradient(45deg, #000 0.188em, dimgray 0.313em 0.375em, #000 0.5em);
-  background: -o-radial-gradient(
-      0.25em 0.375em,
-      0.125em circle,
-      red,
-      transparent
-    ),
-    -o-radial-gradient(0.375em 0.188em, 0.063em circle, var(--bb8-bg) 50%, transparent
-          100%),
+  background:
+    -o-radial-gradient(0.25em 0.375em, 0.125em circle, red, transparent),
+    -o-radial-gradient(
+        0.375em 0.188em,
+        0.063em circle,
+        var(--bb8-bg) 50%,
+        transparent 100%
+      ),
     -o-linear-gradient(45deg, #000 0.188em, dimgray 0.313em 0.375em, #000 0.5em);
-  background: -o-radial-gradient(
-      0.25em 0.375em,
-      0.125em circle,
-      red,
-      transparent
-    ),
-    -o-radial-gradient(0.375em 0.188em, 0.063em circle, var(--bb8-bg) 50%, transparent
-          100%),
+  background:
+    -o-radial-gradient(0.25em 0.375em, 0.125em circle, red, transparent),
+    -o-radial-gradient(
+        0.375em 0.188em,
+        0.063em circle,
+        var(--bb8-bg) 50%,
+        transparent 100%
+      ),
     -o-linear-gradient(45deg, #000 0.188em, dimgray 0.313em 0.375em, #000 0.5em);
-  background: radial-gradient(
-      0.125em circle at 0.25em 0.375em,
-      red,
-      transparent
-    ),
+  background:
+    radial-gradient(0.125em circle at 0.25em 0.375em, red, transparent),
     radial-gradient(
       0.063em circle at 0.375em 0.188em,
       var(--bb8-bg) 50%,
@@ -500,10 +648,16 @@ button{
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  -webkit-box-shadow: 0 0 0 0.089em lightgray, 0.563em 0.281em 0 -0.148em,
-    0.563em 0.281em 0 -0.1em var(--bb8-bg), 0.563em 0.281em 0 -0.063em;
-  box-shadow: 0 0 0 0.089em lightgray, 0.563em 0.281em 0 -0.148em,
-    0.563em 0.281em 0 -0.1em var(--bb8-bg), 0.563em 0.281em 0 -0.063em;
+  -webkit-box-shadow:
+    0 0 0 0.089em lightgray,
+    0.563em 0.281em 0 -0.148em,
+    0.563em 0.281em 0 -0.1em var(--bb8-bg),
+    0.563em 0.281em 0 -0.063em;
+  box-shadow:
+    0 0 0 0.089em lightgray,
+    0.563em 0.281em 0 -0.148em,
+    0.563em 0.281em 0 -0.1em var(--bb8-bg),
+    0.563em 0.281em 0 -0.063em;
   z-index: 1;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
@@ -627,7 +781,8 @@ button{
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background: -webkit-gradient(
+  background:
+    -webkit-gradient(
       linear,
       right top,
       left top,
@@ -637,10 +792,34 @@ button{
       color-stop(90%, var(--accent)),
       color-stop(96%, var(--bb8-bg))
     ),
-    -webkit-gradient(linear, left top, left bottom, color-stop(4%, var(--bb8-bg)), color-stop(4%, var(--accent)), color-stop(10%, transparent), color-stop(90%, var(--accent)), color-stop(96%, var(--bb8-bg))),
-    -webkit-gradient(linear, left top, right top, color-stop(2.156em, transparent), color-stop(2.156em, silver), color-stop(2.188em, transparent)),
-    -webkit-gradient(linear, left top, left bottom, color-stop(2.156em, transparent), color-stop(2.156em, silver), color-stop(2.188em, transparent));
-  background: -o-linear-gradient(
+    -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(4%, var(--bb8-bg)),
+        color-stop(4%, var(--accent)),
+        color-stop(10%, transparent),
+        color-stop(90%, var(--accent)),
+        color-stop(96%, var(--bb8-bg))
+      ),
+    -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(2.156em, transparent),
+        color-stop(2.156em, silver),
+        color-stop(2.188em, transparent)
+      ),
+    -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(2.156em, transparent),
+        color-stop(2.156em, silver),
+        color-stop(2.188em, transparent)
+      );
+  background:
+    -o-linear-gradient(
       right,
       var(--bb8-bg) 4%,
       var(--accent) 4% 10%,
@@ -648,13 +827,26 @@ button{
       var(--accent) 90% 96%,
       var(--bb8-bg) 96%
     ),
-    -o-linear-gradient(var(--bb8-bg) 4%, var(--accent) 4% 10%, transparent 10%
-          90%, var(--accent) 90% 96%, var(--bb8-bg) 96%),
-    -o-linear-gradient(left, transparent 2.156em, silver 2.156em 2.219em, transparent
-          2.188em),
-    -o-linear-gradient(transparent 2.156em, silver 2.156em 2.219em, transparent
-          2.188em);
-  background: linear-gradient(
+    -o-linear-gradient(
+        var(--bb8-bg) 4%,
+        var(--accent) 4% 10%,
+        transparent 10% 90%,
+        var(--accent) 90% 96%,
+        var(--bb8-bg) 96%
+      ),
+    -o-linear-gradient(
+        left,
+        transparent 2.156em,
+        silver 2.156em 2.219em,
+        transparent 2.188em
+      ),
+    -o-linear-gradient(
+        transparent 2.156em,
+        silver 2.156em 2.219em,
+        transparent 2.188em
+      );
+  background:
+    linear-gradient(
       -90deg,
       var(--bb8-bg) 4%,
       var(--accent) 4% 10%,
@@ -693,10 +885,22 @@ button{
   background: rgb(236, 236, 236);
   color: rgb(236, 236, 236);
   border-radius: 50%;
-  -webkit-box-shadow: 0.875em 0.938em, 0 -1.25em, 0.875em -2.125em,
-    2.125em -2.125em, 3.063em -1.25em, 3.063em 0, 2.125em 0.938em;
-  box-shadow: 0.875em 0.938em, 0 -1.25em, 0.875em -2.125em, 2.125em -2.125em,
-    3.063em -1.25em, 3.063em 0, 2.125em 0.938em;
+  -webkit-box-shadow:
+    0.875em 0.938em,
+    0 -1.25em,
+    0.875em -2.125em,
+    2.125em -2.125em,
+    3.063em -1.25em,
+    3.063em 0,
+    2.125em 0.938em;
+  box-shadow:
+    0.875em 0.938em,
+    0 -1.25em,
+    0.875em -2.125em,
+    2.125em -2.125em,
+    3.063em -1.25em,
+    3.063em 0,
+    2.125em 0.938em;
 }
 
 .bb8__body::before {
@@ -713,42 +917,92 @@ button{
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border: 0.313em solid var(--accent);
-  background: -o-radial-gradient(
+  background:
+    -o-radial-gradient(
       center,
       1em circle,
       rgb(236, 236, 236) 50%,
       transparent 51%
     ),
-    -o-radial-gradient(center, 1.25em circle, var(--bb8-bg) 50%, transparent 51%),
-    -o-linear-gradient(right, transparent 42%, var(--accent) 42% 58%, transparent
-          58%),
-    -o-linear-gradient(var(--bb8-bg) 42%, var(--accent) 42% 58%, var(--bb8-bg)
-          58%);
-  background: -o-radial-gradient(
+    -o-radial-gradient(
+        center,
+        1.25em circle,
+        var(--bb8-bg) 50%,
+        transparent 51%
+      ),
+    -o-linear-gradient(
+        right,
+        transparent 42%,
+        var(--accent) 42% 58%,
+        transparent 58%
+      ),
+    -o-linear-gradient(
+        var(--bb8-bg) 42%,
+        var(--accent) 42% 58%,
+        var(--bb8-bg) 58%
+      );
+  background:
+    -o-radial-gradient(
       center,
       1em circle,
       rgb(236, 236, 236) 50%,
       transparent 51%
     ),
-    -o-radial-gradient(center, 1.25em circle, var(--bb8-bg) 50%, transparent 51%),
-    -o-linear-gradient(right, transparent 42%, var(--accent) 42% 58%, transparent
-          58%),
-    -o-linear-gradient(var(--bb8-bg) 42%, var(--accent) 42% 58%, var(--bb8-bg)
-          58%);
-  background: radial-gradient(
+    -o-radial-gradient(
+        center,
+        1.25em circle,
+        var(--bb8-bg) 50%,
+        transparent 51%
+      ),
+    -o-linear-gradient(
+        right,
+        transparent 42%,
+        var(--accent) 42% 58%,
+        transparent 58%
+      ),
+    -o-linear-gradient(
+        var(--bb8-bg) 42%,
+        var(--accent) 42% 58%,
+        var(--bb8-bg) 58%
+      );
+  background:
+    radial-gradient(
       1em circle at center,
       rgb(236, 236, 236) 50%,
       transparent 51%
     ),
-    radial-gradient(1.25em circle at center, var(--bb8-bg) 50%, transparent 51%),
-    -webkit-gradient(linear, right top, left top, color-stop(42%, transparent), color-stop(42%, var(--accent)), color-stop(58%, transparent)),
-    -webkit-gradient(linear, left top, left bottom, color-stop(42%, var(--bb8-bg)), color-stop(42%, var(--accent)), color-stop(58%, var(--bb8-bg)));
-  background: radial-gradient(
+    radial-gradient(
+      1.25em circle at center,
+      var(--bb8-bg) 50%,
+      transparent 51%
+    ),
+    -webkit-gradient(
+        linear,
+        right top,
+        left top,
+        color-stop(42%, transparent),
+        color-stop(42%, var(--accent)),
+        color-stop(58%, transparent)
+      ),
+    -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(42%, var(--bb8-bg)),
+        color-stop(42%, var(--accent)),
+        color-stop(58%, var(--bb8-bg))
+      );
+  background:
+    radial-gradient(
       1em circle at center,
       rgb(236, 236, 236) 50%,
       transparent 51%
     ),
-    radial-gradient(1.25em circle at center, var(--bb8-bg) 50%, transparent 51%),
+    radial-gradient(
+      1.25em circle at center,
+      var(--bb8-bg) 50%,
+      transparent 51%
+    ),
     linear-gradient(
       -90deg,
       transparent 42%,
@@ -886,8 +1140,12 @@ button{
   left: 0.938em;
   width: 1.875em;
   height: 1.875em;
-  -webkit-box-shadow: 0 0 0.188em #ffffff52, 0 0 0.188em #6e8ea24b;
-  box-shadow: 0 0 0.188em #ffffff52, 0 0 0.188em #6e8ea24b;
+  -webkit-box-shadow:
+    0 0 0.188em #ffffff52,
+    0 0 0.188em #6e8ea24b;
+  box-shadow:
+    0 0 0.188em #ffffff52,
+    0 0 0.188em #6e8ea24b;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);
@@ -921,8 +1179,12 @@ button{
   left: 3.438em;
   width: 0.625em;
   height: 0.625em;
-  -webkit-box-shadow: 0 0 0.125em #ffffff52, 0 0 0.125em #6e8ea24b;
-  box-shadow: 0 0 0.125em #ffffff52, 0 0 0.125em #6e8ea24b;
+  -webkit-box-shadow:
+    0 0 0.125em #ffffff52,
+    0 0 0.125em #6e8ea24b;
+  box-shadow:
+    0 0 0.125em #ffffff52,
+    0 0 0.125em #6e8ea24b;
   -webkit-transition: 0.6s;
   -o-transition: 0.6s;
   transition: 0.6s;
@@ -932,8 +1194,12 @@ button{
   left: 4.375em;
   width: 0.5em;
   height: 0.5em;
-  -webkit-box-shadow: 0 0 0.125em #ffffff52, 0 0 0.125em #6e8ea24b;
-  box-shadow: 0 0 0.125em #ffffff52, 0 0 0.125em #6e8ea24b;
+  -webkit-box-shadow:
+    0 0 0.125em #ffffff52,
+    0 0 0.125em #6e8ea24b;
+  box-shadow:
+    0 0 0.125em #ffffff52,
+    0 0 0.125em #6e8ea24b;
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s;
@@ -970,8 +1236,12 @@ button{
   background: linear-gradient(#e6ac5c, #d75449);
   right: 1.25em;
   top: 2.188em;
-  -webkit-box-shadow: 0 0 0.438em #e6ad5c3d, 0 0 0.438em #d755494f;
-  box-shadow: 0 0 0.438em #e6ad5c3d, 0 0 0.438em #d755494f;
+  -webkit-box-shadow:
+    0 0 0.438em #e6ad5c3d,
+    0 0 0.438em #d755494f;
+  box-shadow:
+    0 0 0.438em #e6ad5c3d,
+    0 0 0.438em #d755494f;
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
   transition: 0.7s;
@@ -991,10 +1261,20 @@ button{
 
 .bb8-toggle__star:nth-child(1) {
   left: 3.75em;
-  -webkit-box-shadow: 1.25em 0.938em, -1.25em 2.5em, 0 1.25em, 1.875em 0.625em,
-    -3.125em 1.875em, 1.25em 2.813em;
-  box-shadow: 1.25em 0.938em, -1.25em 2.5em, 0 1.25em, 1.875em 0.625em,
-    -3.125em 1.875em, 1.25em 2.813em;
+  -webkit-box-shadow:
+    1.25em 0.938em,
+    -1.25em 2.5em,
+    0 1.25em,
+    1.875em 0.625em,
+    -3.125em 1.875em,
+    1.25em 2.813em;
+  box-shadow:
+    1.25em 0.938em,
+    -1.25em 2.5em,
+    0 1.25em,
+    1.875em 0.625em,
+    -3.125em 1.875em,
+    1.25em 2.813em;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -1002,10 +1282,20 @@ button{
 
 .bb8-toggle__star:nth-child(2) {
   left: 4.688em;
-  -webkit-box-shadow: 0.625em 0, 0 0.625em, -0.625em -0.625em, 0.625em 0.938em,
-    -3.125em 1.25em, 1.25em -1.563em;
-  box-shadow: 0.625em 0, 0 0.625em, -0.625em -0.625em, 0.625em 0.938em,
-    -3.125em 1.25em, 1.25em -1.563em;
+  -webkit-box-shadow:
+    0.625em 0,
+    0 0.625em,
+    -0.625em -0.625em,
+    0.625em 0.938em,
+    -3.125em 1.25em,
+    1.25em -1.563em;
+  box-shadow:
+    0.625em 0,
+    0 0.625em,
+    -0.625em -0.625em,
+    0.625em 0.938em,
+    -3.125em 1.25em,
+    1.25em -1.563em;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -1013,10 +1303,22 @@ button{
 
 .bb8-toggle__star:nth-child(3) {
   left: 5.313em;
-  -webkit-box-shadow: -0.625em -0.625em, -2.188em 1.25em, -2.188em 0,
-    -3.75em -0.625em, -3.125em -0.625em, -2.5em -0.313em, 0.75em -0.625em;
-  box-shadow: -0.625em -0.625em, -2.188em 1.25em, -2.188em 0, -3.75em -0.625em,
-    -3.125em -0.625em, -2.5em -0.313em, 0.75em -0.625em;
+  -webkit-box-shadow:
+    -0.625em -0.625em,
+    -2.188em 1.25em,
+    -2.188em 0,
+    -3.75em -0.625em,
+    -3.125em -0.625em,
+    -2.5em -0.313em,
+    0.75em -0.625em;
+  box-shadow:
+    -0.625em -0.625em,
+    -2.188em 1.25em,
+    -2.188em 0,
+    -3.75em -0.625em,
+    -3.125em -0.625em,
+    -2.5em -0.313em,
+    0.75em -0.625em;
   -webkit-transition: var(--transition);
   -o-transition: var(--transition);
   transition: var(--transition);

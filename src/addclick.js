@@ -1,3 +1,6 @@
+import { render } from './main.js';
+import { click_modal } from './main.js';
+import '/index.css'
 let data_person=[];
 let data_admin=[];
 let admin_setting=[];
@@ -17,8 +20,6 @@ fetch("/data.json").then((response)=>{
 })
 let nav_bar = document.querySelectorAll(".nav");
 let array_nav = Array.from(nav_bar);
-import { render } from './main.js';
-import { click_modal } from './main.js';
 let main = document.querySelector(".content_dy");
 array_nav.forEach((e)=>{
     e.addEventListener("click",function(){
@@ -30,6 +31,7 @@ array_nav.forEach((e)=>{
             document.startViewTransition(function(){
                 if(e.dataset.link=="Application"){ 
                 application_page()
+
                 }
                 if(e.dataset.link=="Dashboard"){
                 get_page("test.html",render)
@@ -231,3 +233,11 @@ async function settings_page() {
     get_data(admin_setting, document.querySelector(".body_table_d"),"trash-can","pencil")
     remove_items()
 }
+function change_theme(){
+    let html = document.querySelector("html");
+    let btn_theme = document.querySelector(".theme");
+    btn_theme.addEventListener("click",function(){
+        document.documentElement.classList.add("dark")
+    })
+}
+change_theme()

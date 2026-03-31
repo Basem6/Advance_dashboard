@@ -3,32 +3,32 @@
                     <div class="inputs flex gap-2 min-w-full flex-wrap items-center  justify-between ">
                         <div class="flex flex-col justify-center grow ">
                             <div class="title  min-h-6 max-h-6 ">Filter by Status</div>
-                            <input type="text" placeholder="Filter by Status" data-category="status" class="bg-[#13161b] input rounded-md  border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%] max-h-32  pr-3">
+                            <input type="text" placeholder="Filter by Status" data-category="status" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 input rounded-md outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%] max-h-32  pr-3">
                         </div>
                         <div class="flex flex-col justify-center  grow">
                             <div class="title  min-h-6 max-h-6">Filter by Major</div>
-                            <input type="text" placeholder="Filter by Major" data-category="Major" class="bg-[#13161b] rounded-md input border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32  pr-3">
+                            <input type="text" placeholder="Filter by Major" data-category="Major" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-md input outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32  pr-3">
                         </div>
                         <div class="flex flex-col justify-center  grow">
                             <div class="title  min-h-6 max-h-6">Filter by Date</div>
-                            <input type="text" placeholder="Filter by Date" data-category="Date" class="bg-[#13161b] rounded-md input border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32  pr-3">
+                            <input type="text" placeholder="Filter by Date" data-category="Date" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-md input outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32  pr-3">
                         </div>
                         <div class="flex flex-col justify-center  grow">
                             <div class="title  min-h-6"></div>
-                            <input type="text" placeholder="Search Application" data-category="person" class="bg-[#13161b] rounded-md input border-none outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[40%]  max-h-23 ">
+                            <input type="text" placeholder="Search Application" data-category="person" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-md input outline-2 focus:outline outline-[#5b9efcbb] py-0.5 px-3 caret-[#78abf2] min-w-[40%]  max-h-23 ">
                         </div>
                         <div class="flex flex-col justify-center grow">
                             <div class="title min-h-6"></div>
-                            <button type="text" class="bg-[#2e3138] rounded-md btn border-none py-0.5 px-3 caret-[#78abf2] min-w-[20%]  max-h-32 add-application">Add New Application</button>
+                            <button type="text" class="bg-gray-200 dark:bg-[#2e3138] text-gray-900 dark:text-white rounded-md btn border border-gray-300 dark:border-none py-0.5 px-3 caret-[#78abf2] min-w-[20%]  max-h-32 add-application">Add New Application</button>
                         </div>
                         <div class="flex flex-col justify-center  grow">
                             <div class="title  min-h-6"></div>
-                            <button class="bg-[#16181a] rounded-md    py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32 ">Export Data</button>
+                            <button class="bg-gray-200 dark:bg-[#16181a] text-gray-900 dark:text-white rounded-md border border-gray-300 dark:border-none py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32 ">Export Data</button>
                         </div>
                     </div>
             </section>
             <div class="con min-w-full  px-3  rounded-md">
-                    <div class="content p-1 text-gray-300 w-full bg-[#131419] rounded-md px-2 min-h-137.5">
+                    <div class="content p-1 text-gray-700 dark:text-gray-300 w-full bg-white dark:bg-[#131419] border border-gray-200 dark:border-transparent rounded-md px-2 min-h-137.5">
                             <table class="dashboard-table">
                                 <thead>
                                     <tr>
@@ -47,18 +47,18 @@
                     </div> 
             </div>
             <div  class="modal">
-                    <div class="bg-gray-800 min-w-96 max-w-md p-6 rounded-xl dk shadow-xl">
-                        <h2 class="text-xl font-semibold mb-4">Add New Application</h2>
+                    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-transparent min-w-96 max-w-md p-6 rounded-xl dk shadow-xl">
+                        <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Add New Application</h2>
                         <div class="space-y-4">
-                            <input type="text" placeholder="Applicant Name"  required class="input_name p-2 w-full rounded bg-gray-900 border-none outline-2 focus:outline outline-[#5b9efcbb]  caret-[#78abf2]">
-                            <input type="text" placeholder="The Major"  required class="input_Major w-full p-2 rounded bg-gray-900   border-none outline-2 focus:outline outline-[#5b9efcbb]  caret-[#78abf2]">
-                            <select class="w-full p-2 rounded bg-gray-900 border  border-gray-700" id="statue2" >
+                            <input type="text" placeholder="Applicant Name"  required class="input_name p-2 w-full rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 outline-2 focus:outline outline-[#5b9efcbb]  caret-[#78abf2]">
+                            <input type="text" placeholder="The Major"  required class="input_Major w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 outline-2 focus:outline outline-[#5b9efcbb]  caret-[#78abf2]">
+                            <select class="w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100" id="statue2" >
                                 <option selected>Merit</option>
                                 <option>Need</option>
                                 <option>Departmental</option>
                                 <option>Other</option>
                             </select>
-                            <select class="w-full p-2 rounded bg-gray-900 border  border-gray-700" id="statue" >
+                            <select class="w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100" id="statue" >
                                 <option>Reviewing</option>
                                 <option selected>Pending Document</option>
                                 <option>Need Document</option>
