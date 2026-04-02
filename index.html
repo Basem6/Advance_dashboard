@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard</title>  
     <!-- <link rel="stylesheet" href="index.css"> -->
     <link rel="stylesheet" href="fontawesome-free-7.2.0-web/fontawesome-free-7.2.0-web/css/all.css">
 </head>
 <body class="bg-[#f8f9fa] dark:bg-[#03030b] min-h-screen h-auto">
     <div class="dashboard flex bg-[#f8f9fa] dark:bg-[#03030b] minh-full h-auto w-full pb-4 relative">
-        <aside class="bg-[#ffffff] dark:bg-[#131419] border-r border-gray-200 dark:border-transparent aside md:max-w-[20%]  lg:w-[15%] h-full py-7 px-2 flex flex-col items-start gap-5 fixed">
+        <aside class="bg-[#ffffff] dark:bg-[#131419] border-r border-gray-200 dark:border-transparent aside   lg:w-[15%] h-full py-7 px-2 flex flex-col items-start gap-5 fixed">
             <div class="logo w-16 h-16 relative left-1/2 -translate-x-1/2 scale-125 mb-3">
                 <img src="/assests/icons/logo.svg" alt="" class="drop-shadow-2xl shadow-[#78abf2]">
             </div>
@@ -42,10 +42,10 @@
                 <span>Settings</span>
             </div>
         </aside>
-        <main class="main text-gray-800 dark:text-gray-300 md:max-w-[80%]  lg:min-w-[85%] h-auto md:ml-[20%] lg:ml-[15%] relative">
+        <main class="main text-gray-800 dark:text-gray-300   lg:min-w-[85%] h-auto  lg:ml-[15%] relative">
             <header class="flex justify-between items-start px-3 pt-3 pb-1.5 mt-0.5 gap-2 min-w-full max-w-full flex-wrap nav-top border-b border-gray-200 dark:border-transparent">
                 <div class="title-left w-1/2 text-2xl text-gray-900 dark:text-gray-100"><span class="font-bold">Scholar Track Hub</span>:Scholarship Monitoring Dashboard</div>
-                <div class="search w-36  h-7 relative">
+                <div class="search w-36  h-7 relative col-doc">
                     <span class="fa-solid fa-search absolute right-3 text-gray-500 dark:text-gray-400 text-sm top-1/2 -translate-y-1/2"></span>
                     <input type="text" name="" placeholder="Search" id="" class="bg-white dark:bg-[#13161b] border border-gray-300 dark:border-[#374151] text-gray-900 dark:text-gray-100 rounded-lg  py-0.5 px-3 caret-[#78abf2] w-full h-full pr-11">
                 </div>
@@ -245,6 +245,30 @@
             </div>
         </main>
     </div>
+    <nav class="mobile-bottom-nav  fixed bottom-0 left-0 right-0 bg-white dark:bg-[#131419] border-t border-gray-200 dark:border-[#374151] z-50 min-w-full ">
+        <div class="flex justify-around items-center h-20 px-2 min-w-full">
+            <button class="nav-item active" data-link="Dashboard" title="Dashboard">
+                <span class="fa-regular fa-house text-xl"></span>
+                <span class="text-xs mt-1">Dashboard</span>
+            </button>
+            <button  class="nav-item" data-link="Application" title="Application">
+                <span class="fa-regular fa-newspaper text-xl"></span>
+                <span class="text-xs mt-1">Application</span>
+            </button>
+            <button  class="nav-item" data-link="Scholars" title="Scholars">
+                <span class="fa-regular fa-user text-xl"></span>
+                <span class="text-xs mt-1">Scholars</span>
+            </button>
+            <button  class="nav-item" data-link="Documents" title="Documents">
+                <span class="fa-regular fa-file-lines text-xl"></span>
+                <span class="text-xs mt-1">Documents</span>
+            </button>
+            <button  class="nav-item" data-link="Settings" title="Settings">
+                <span class="fa-solid fa-gear text-xl"></span>
+                <span class="text-xs mt-1">Settings</span>
+            </button>
+        </div>
+    </nav>
 <script type="module" src="src/main.js"></script>
 </body>
 </html>

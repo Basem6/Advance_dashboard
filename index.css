@@ -77,6 +77,7 @@ aside > div:not(:nth-child(1)).active {
   }
   .main {
     max-width: 100%;
+    padding-bottom: 6rem;
   }
   .charts {
     display: flex;
@@ -95,11 +96,17 @@ aside > div:not(:nth-child(1)).active {
     max-width: 100%;
   }
 }
+.mobile-bottom-nav{
+  view-transition-name: mobile-nav;
+}
 .content_dy {
   view-transition-name: main;
 }
 .nav.active {
   pointer-events: none;
+}
+::view-transition-old(mobile-bottom-nav),::view-transition-new(mobile-bottom-nav) {
+  animation: none
 }
 ::view-transition-old(main) {
   animation: fad1 500ms ease-in-out forwards;
@@ -193,7 +200,7 @@ tbody > tr:last-child > td {
 .dark .Scheduled {
   background-color: rgba(44, 174, 131, 0.534);
   color: rgb(127, 255, 214);
-} 
+}
 .Reviewing {
   background-color: rgba(179, 47, 216, 0.733);
   color: rgb(255, 255, 255);
@@ -210,7 +217,7 @@ tbody > tr:last-child > td {
 
 .dark .Need {
   background-color: rgba(212, 203, 24, 0.658);
-  color:  rgba(255, 211, 117, 0.943);
+  color: rgba(255, 211, 117, 0.943);
 }
 .Missing {
   background-color: #c61d17ce;
@@ -237,90 +244,68 @@ tbody > tr:last-child > td {
   justify-content: center;
   align-items: center;
   position: fixed;
-  inset: 0;
   left: 50%;
   opacity: 0;
-  transform: translateX(-50%);
+  transform: scale(0) translateX(-50%);
   top: 20%;
-  max-width: 400px;
-  max-height: 400px;
-  transform-origin: center;
-  background-color: transparent;
+  width: 40%;
+  height: 400px;
   transition: 300ms ease-in-out;
 }
-/* الأساس */
 .choices {
   background-color: #ffffff !important;
   color: #1f2937;
   border: 1px solid #e5e7eb !important;
 }
-
 .dark .choices {
   background-color: #111827 !important;
   color: white;
   border: 1px solid #374151;
 }
-
-/* الجزء الظاهر */
 .choices__inner {
   background-color: #ffffff !important;
   color: #1f2937;
   border: none;
 }
-
 .dark .choices__inner {
   background-color: #111827 !important;
   color: white;
   border: none;
 }
-
-/* القائمة */
 .choices__list--dropdown,
 .choices__list[aria-expanded] {
   background-color: #ffffff !important;
   color: #1f2937;
 }
-
 .dark .choices__list--dropdown,
 .dark .choices__list[aria-expanded] {
   background-color: #111827 !important;
   color: white;
 }
-
-/* 🔥 أهم سطرين (بيشيلوا الأبيض) */
 .choices__item,
 .choices__item--selectable {
   background-color: #ffffff !important;
   color: #1f2937 !important;
 }
-
 .dark .choices__item,
 .dark .choices__item--selectable {
   background-color: #111827 !important;
   color: white !important;
 }
-
-/* hover */
 .choices__item--choice.is-highlighted {
   background-color: #f3f4f6 !important;
   min-width: 100%;
 }
-
 .dark .choices__item--choice.is-highlighted {
   background-color: #1f2937 !important;
   min-width: 100%;
 }
-
-/* selected item */
 .choices__item--selectable.is-selected {
   background-color: #f0f3f8 !important;
 }
-
 .dark .choices__item--selectable.is-selected {
   background-color: #111827 !important;
 }
-
-/* يغطي أي عنصر ممكن يعمل أبيض */
 .choices__inner * {
   background-color: transparent !important;
 }
@@ -329,7 +314,6 @@ tbody > tr:last-child > td {
   border: none !important;
   color: #1f2937;
 }
-
 .dark .choices__inner * {
   background-color: transparent !important;
 }
@@ -338,21 +322,17 @@ tbody > tr:last-child > td {
   border: none !important;
   color: #fff;
 }
-
 .choices__input {
   background-color: #ffffff !important;
   color: #1f2937 !important;
 }
-
 .dark .choices__input {
   background-color: #111827 !important;
   color: #fff !important;
 }
-
 .choices__list--dropdown {
   background-color: #ffffff !important;
 }
-
 .dark .choices__list--dropdown {
   background-color: #111827 !important;
 }
@@ -379,16 +359,8 @@ button {
 .delete {
   cursor: pointer;
 }
-/* From Uiverse.io by Galahhad */
-/* REMASTERED */
-/* RTX-ON */
-/* completely redone toggle and droid */
-
 .bb8-toggle {
   --toggle-size: 6px;
-  /* finally I removed the scale now everything depends on the font-size */
-  /* --margin-top-for-head: 1.75em; */
-  /* it's just in case 👆 */
   --toggle-width: 10.625em;
   --toggle-height: 5.625em;
   --toggle-offset: calc((var(--toggle-height) - var(--bb8-diameter)) / 2);
@@ -400,7 +372,6 @@ button {
   --accent: #de7d2f;
   --bb8-bg: #fff;
 }
-
 .bb8-toggle,
 .bb8-toggle *,
 .bb8-toggle *::before,
@@ -408,20 +379,17 @@ button {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 .bb8-toggle {
   cursor: pointer;
   margin-top: var(--margin-top-for-head);
   font-size: var(--toggle-size);
 }
-
 .bb8-toggle__checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   display: none;
 }
-
 .bb8-toggle__container {
   width: var(--toggle-width);
   height: var(--toggle-height);
@@ -434,7 +402,6 @@ button {
   -o-transition: var(--transition);
   transition: var(--transition);
 }
-
 .bb8 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -454,7 +421,6 @@ button {
   transition: var(--transition);
   z-index: 2;
 }
-
 .bb8__head-container {
   position: relative;
   -webkit-transition: var(--transition);
@@ -465,7 +431,6 @@ button {
   -ms-transform-origin: 1.25em 3.75em;
   transform-origin: 1.25em 3.75em;
 }
-
 .bb8__head {
   overflow: hidden;
   margin-bottom: -0.188em;
@@ -1428,14 +1393,75 @@ button {
   top: 100%;
 }
 
+/* Mobile Bottom Navigation Bar */
+.mobile-bottom-nav {
+  min-width: 100%;
+  display: none;
+  justify-content:center;
+  background-color: #ffffff;
+}
+
+.dark .mobile-bottom-nav {
+  background-color: #131419;
+}
+
+.mobile-bottom-nav .nav-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  align-items: center;
+  color: #6b7280;
+  justify-content: center;
+  transition: all 0.3s ease;
+  gap: 0.25rem;
+  cursor: pointer;
+  border-radius: 0.375rem;
+  position: relative;
+}
+
+.dark .mobile-bottom-nav .nav-item {
+  color: #9ca3af;
+}
+.mobile-bottom-nav .nav-item:hover {
+  color: #78abf2;
+  transform: scale(1.1);
+}
+.dark .mobile-bottom-nav .nav-item:hover {
+  color: #78abf2;
+  transform: scale(1.1);
+}
+.mobile-bottom-nav .nav-item.active {
+  color: #78abf2;
+}
+.dark .mobile-bottom-nav .nav-item.active {
+  color: #78abf2;
+}
+.mobile-bottom-nav .nav-item.active::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 20px;
+  height: 3px;
+  border-radius: 2px;
+}
+.mobile-bottom-nav .nav-item span:first-child {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-bottom-nav .nav-item span:last-child {
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 500;
+}
 .bb8-toggle__checkbox:checked + .bb8-toggle__container .tatto-2 {
   top: 100%;
 }
-
 .bb8-toggle__checkbox:checked + .bb8-toggle__container .bb8 {
   left: calc(100% - var(--bb8-diameter) - var(--toggle-offset));
 }
-
 .bb8-toggle__checkbox:checked + .bb8-toggle__container .bb8__shadow {
   left: calc(100% - var(--bb8-diameter) - var(--toggle-offset) + 0.938em);
   -webkit-transform: skew(70deg);
@@ -1510,4 +1536,33 @@ button {
 
 .bb8:hover .bb8__head::after {
   background-position: 0 0 !important;
+}
+@media (max-width: 768px) {
+  .col-actions,
+  .col-doc,
+  .col-status,
+  .col-date {
+    display: none;
+  }
+  .admin-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1200px) {
+  .aside {
+    display: none;
+  }
+  .mobile-bottom-nav{
+    display: flex;
+  }
+  .main {
+    margin-left: 0;
+    min-width: 100%;
+  }
+  .modal {
+    width: 92%;
+  }
 }

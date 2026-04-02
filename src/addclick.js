@@ -19,40 +19,67 @@ fetch("/data.json").then((response)=>{
     console.log(e)
 })
 let nav_bar = document.querySelectorAll(".nav");
+let mobile_nav_bar = document.querySelectorAll(".mobile-bottom-nav .nav-item");
 let array_nav = Array.from(nav_bar);
+let array_mobile_nav = Array.from(mobile_nav_bar);
 let main = document.querySelector(".content_dy");
-array_nav.forEach((e)=>{
-    e.addEventListener("click",function(){
-        array_nav.forEach((el)=>{
-            el.classList.remove("active");
-        })
-        e.classList.add("active");
-        if(document.startViewTransition)
-            document.startViewTransition(function(){
-                if(e.dataset.link=="Application"){ 
-                application_page()
 
-                }
-                if(e.dataset.link=="Dashboard"){
-                get_page("test.html",render)
-                }
-                if(e.dataset.link=="Funding"){
-                get_page("funding.html",render)
-                }
-                if(e.dataset.link=="Documents"){
+function updateActiveNav(dataLink) {
+    array_nav.forEach((el) => {
+        el.classList.remove("active");
+    });
+    array_mobile_nav.forEach((el) => {
+        el.classList.remove("active");
+    });
+    
+    const activeDesktop = array_nav.find(el => el.dataset.link === dataLink);
+    const activeMobile = array_mobile_nav.find(el => el.dataset.link === dataLink);
+    
+    if (activeDesktop) activeDesktop.classList.add("active");
+    if (activeMobile) activeMobile.classList.add("active");
+}
+
+function handleNavigation(e) {
+    updateActiveNav(e.dataset.link);
+    
+    if (document.startViewTransition) {
+        document.startViewTransition(function () {
+            if (e.dataset.link == "Application") {
+                application_page()
+            }
+            if (e.dataset.link == "Dashboard") {
+                get_page("test.html", render)
+            }
+            if (e.dataset.link == "Funding") {
+                get_page("funding.html", render)
+            }
+            if (e.dataset.link == "Documents") {
                 document_page()
-                }
-                if(e.dataset.link=="Reports"){
-                get_page("reports.html",render)
-                }
-                if(e.dataset.link=="Scholars"){
-                get_page("scholars.html",render)
-                }
-                if(e.dataset.link=="Settings"){
+            }
+            if (e.dataset.link == "Reports") {
+                get_page("reports.html", render)
+            }
+            if (e.dataset.link == "Scholars") {
+                get_page("scholars.html", render)
+            }
+            if (e.dataset.link == "Settings") {
                 settings_page()
-                }
-    })
-    })
+            }
+        });
+    }
+}
+
+array_nav.forEach((e) => {
+    e.addEventListener("click", function () {
+        handleNavigation(e);
+    });
+});
+
+array_mobile_nav.forEach((e) => {
+    e.addEventListener("click", function (event) {
+        event.preventDefault();
+        handleNavigation(e);
+    });
 });
 async function get_page(url,call) {
                     main.innerHTML=""
@@ -71,6 +98,9 @@ function get_data(array, place , icon1, icon2){
                             for(let e=0;e<array_key.length;e++){
                                 if(array_key[e]){
                                 let td = document.createElement("td");
+                                if(array_key[e]=="status" || array_key[e]=="Scholar" || array_key[e]=="Date" || array_key[e]=="file_name"|| array_key[e]=="Deadline"|| array_key[e]=="Role"){
+                                    td.classList.add("col-doc")
+                                }
                                 let txt = document.createTextNode(array[i][`${array_key[e]}`]);
                                 if(array_key[e]=="file_type"){
                                     let span = document.createElement("span")
@@ -93,7 +123,7 @@ function get_data(array, place , icon1, icon2){
                                     span2.appendChild(txt)
                                     td.appendChild(span)
                                     td.appendChild(span2)
-                                    td.className="flex items-center gap-2"
+                                    td.className="flex items-center gap-2 relative top-[0.5px]"
                                     tr.appendChild(td)
                                 }
                                 if(array_key[e]=="status"){
@@ -117,6 +147,8 @@ function get_data(array, place , icon1, icon2){
                                 }
                             }
                             let td = document.createElement("td");
+                            // if(array!=data_admin){}
+                            td.classList.add("col-doc")
                             let eyeBtn = document.createElement("button");
                             let pencilBtn = document.createElement("button");
                             if(icon1=="trash-can" && icon2=="upload"){
@@ -163,9 +195,8 @@ function filter(target, array ,place , icon1, icon2){
                     let aMatch = a[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
                     let bMatch = b[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
                     return bMatch - aMatch;
-                    }
                 }
-                    });
+            }});
                     get_data(sorted_array,place, icon1, icon2)
 }
 async function application_page() {

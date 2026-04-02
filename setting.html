@@ -1,23 +1,23 @@
 
             <section class="px-3 min-w-full">
                 <div class="cards flex flex-wrap gap-4">
-                    <div class="card-last bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  w-150 p-4 h-72 shadow-md grow">
-                        <div class="flex  items-center gap-3 h-3/4">
+                    <div class="card-last bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  w-150 p-3 min-h-72 shadow-md grow relative max-w-full">
+                        <div class="flex  items-center gap-3   flex-wrap pt-5 admin-information">
                             <div class="admin-image w-32 h-32 relative">
                                     <img src="/assests/photo/admin-photo.webp" alt="Admin Profile" class="w-full h-full rounded-full border-2 border-gray-300 dark:border-[#0f1219] object-cover">
                             </div> 
-                            <div class="ml-3 felx flex-col items-start">
+                            <div class="felx flex-col items-center justify-center ">
                                     <h3 class="text-3xl  text-gray-900 dark:text-white tracking-wide">Dr. Evein Head</h3>
                                     <p class="font-light text-xl tracking-wide text-gray-700 dark:text-gray-300">Email:dr.reen@gmail.com</p>
                                     <p class="font-light text-xl tracking-wide text-gray-700 dark:text-gray-300">Role:(Admin)</p>
-                                <div class="btns felx gap-5 min-w-full  relative top-12">
-                                    <button class="bg-white dark:bg-transparent text-gray-900 dark:text-white px-4 py-1 border border-gray-400 dark:border-gray-400/40 rounded-md mr-1 hover:bg-gray-100 dark:hover:bg-gray-800/40"><span class="fa-solid fa-pen mr-2 text-cyan-400 dark:text-sky-300"></span>Eidt Profile</button>
-                                    <button class="bg-white dark:bg-transparent text-gray-900 dark:text-white px-4 py-1 border border-gray-400 dark:border-gray-400/40 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800/40"><span class="fa-solid fa-key mr-2 text-red-400 dark:text-red-300"></span>Change Passward</button>
-                                </div>
                             </div> 
-                        </div>
+                            <div class="btns flex gap-2 mt-10 ">
+                                    <button class="bg-white dark:bg-transparent text-gray-900 dark:text-white px-4 py-1 border border-gray-400 dark:border-gray-400/40 rounded-md  hover:bg-gray-100 dark:hover:bg-gray-800/40 whitespace-nowrap"><span class="fa-solid fa-pen mr-2 text-cyan-400 dark:text-sky-300"></span>Eidt Profile</button>
+                                    <button class="bg-white dark:bg-transparent text-gray-900 dark:text-white px-4 py-1 border border-gray-400 dark:border-gray-400/40 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800/40 whitespace-nowrap"><span class="fa-solid fa-key mr-2 text-red-400 dark:text-red-300"></span>Change Passward</button>
+                            </div>
+                        </div>                       
                     </div>
-                    <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  w-150 p-4 h-72 shadow-md grow">
+                    <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  w-150 p-3 h-72 shadow-md grow max-w-full">
                         <h2 class="text-2xl text-gray-900 dark:text-white mb-2.5 flex items-center">
                             <span class="fa-solid fa-sliders mr-2 text-blue-600 dark:text-[#1c4680] text-xl"></span>
                             System Settings
@@ -46,16 +46,16 @@
                             </div>
                             </div>
                     </div>
-                    <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  min-w-fill py-2 px-4 min-h-72 shadow-md grow">
+                    <div class="card bg-white dark:bg-[#0f1219] border border-gray-200 dark:border-transparent  min-w-fill py-1 px-4 min-h-72 shadow-md grow max-w-full">
                         <table class="dashboard-table w-full">
                                     <thead>
                                         <tr>
-                                            <th class="col-id text-gray-900 dark:text-white">Admin Name</th>
+                                            <th class="col-id text-gray-900 dark:text-white ">Admin Name</th>
                                             <th class="col-name text-gray-900 dark:text-white">Email</th>
-                                            <th class="col-major text-gray-900 dark:text-white">Role</th>
-                                            <th class="col-doc text-gray-900 dark:text-white">Last login</th>
-                                            <th class="col-date text-gray-900 dark:text-white">Statue</th>
-                                            <th class="text-gray-900 dark:text-white">Action</th>
+                                            <th class="col-doc text-gray-900 dark:text-white col-doc">Role</th>
+                                            <th class=" text-gray-900 dark:text-white whitespace-nowrap">Last login</th>
+                                            <th class="col-status text-gray-900 dark:text-white">Statue</th>
+                                            <th class="col-actions relative top-[0.5px]">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="body_table_d">

@@ -500,10 +500,10 @@ export function click_modal(fun,array,fun2){
         let btn = document.querySelector(".add-application");
         let create_btn = document.querySelector("#create");
         btn.addEventListener("click",function(){
-            modal.style.cssText="opacity:1;"
+            modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
         })
         closeModal.addEventListener("click",function(){
-            modal.style.cssText="opacity: 0;scale:0"
+            modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
             setTimeout(() => {
                     fun2()
             }, 400);
@@ -518,7 +518,7 @@ export function click_modal(fun,array,fun2){
                     let choice_document = document.querySelector("#statue2").value;
                     let choice_statue = document.querySelector("#statue").value;
                     fun2()
-                    modal.style.cssText="opacity: 0;scale:0"
+                    modal.style.cssText="opacity: 0;;transform: scale(0) translateX(-50%);"
                     array.push({id:array[(array.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,status:choice_statue});
                     document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
                     setTimeout(() => {
