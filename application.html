@@ -24,7 +24,7 @@
                         </div>
                         <div class="flex flex-col justify-center  grow">
                             <div class="title  min-h-6"></div>
-                            <button class="bg-gray-200 dark:bg-[#16181a] text-gray-900 dark:text-white rounded-md border border-gray-300 dark:border-none py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32 ">Export Data</button>
+                            <button class="bg-gray-200 dark:bg-[#16181a] text-gray-900 dark:text-white rounded-md border border-gray-300 dark:border-none py-0.5 px-3 caret-[#78abf2] min-w-[10%]  max-h-32  export_btn">Export Data</button>
                         </div>
                     </div>
             </section>
@@ -33,7 +33,7 @@
                             <table class="dashboard-table">
                                 <thead>
                                     <tr>
-                                        <th class="col-id">Schlar ID</th>
+                                        <th class="col-id ">ID</th>
                                         <th class="col-name whitespace-nowrap">Application Name</th>
                                         <th class="col-major">Major</th>
                                         <th class="col-doc">Document Type</th>
@@ -54,16 +54,16 @@
                             <input type="text" placeholder="Applicant Name"  required class="input_name p-2 w-full rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100   caret-[#78abf2]">
                             <input type="text" placeholder="The Major"  required class="input_Major w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100   caret-[#78abf2]">
                             <select class="w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100" id="statue2" >
-                                <option selected>Merit</option>
-                                <option>Need</option>
-                                <option>Departmental</option>
-                                <option>Other</option>
+                                <option value="Merit">Merit</option>
+                                <option value="Need">Need</option>
+                                <option value="Departmental">Departmental</option>
+                                <option value="Other">Other</option>
                             </select>
                             <select class="w-full p-2 rounded bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100" id="statue" >
-                                <option>Reviewing</option>
-                                <option selected>Pending Document</option>
-                                <option>Need Document</option>
-                                <option>Interview Scheduled</option>
+                                <option value="Reviewing">Reviewing</option>
+                                <option value="Pending Document">Pending Document</option>
+                                <option value="Need Document">Need Document</option>
+                                <option value="Interview Scheduled">Interview Scheduled</option>
                             </select>
                         </div>
                         <div class="flex justify-end gap-3 mt-6">
@@ -73,6 +73,9 @@
                             <button id="create" class="px-4 py-2 bg-blue-500/80 rounded hover:bg-blue-600/80 ">
                             Create
                             </button>
+                            <button id="btn_edit" class="px-4 py-2  bg-blue-500/80  rounded hover:bg-blue-600/80 ">
+                            Edit
+                            </button>          
                         </div>
                     </div>
             </div>

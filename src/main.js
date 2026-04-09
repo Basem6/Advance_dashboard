@@ -387,45 +387,6 @@ export function render(){
         chart.appendTo("#chart3");
     }, 0);
     }
-    if(document.querySelector("#statue")){
-        const element = document.getElementById('statue');
-        const choices = new Choices(element, {
-        searchEnabled: false,   // الغاء البحث
-        removeItemButton: false,
-        placeholder: true,
-        placeholderValue:"Select Statue"
-        });
-    }
-    if(document.querySelector("#statue2")){
-        const element2 = document.getElementById('statue2');
-        const choices = new Choices(element2, {
-        searchEnabled: false,   // الغاء البحث
-        removeItemButton: false,
-        placeholder: true,
-        placeholderValue:"Select Document Type"
-        });
-    }
-    if(document.querySelector("#statue3")){
-        const element3 = document.getElementById('statue3');
-        const choices = new Choices(element3, {
-        placeholder: true,
-        placeholderValue:"Statue"
-        });
-    }
-    if(document.querySelector("#statue4")){
-        const element4 = document.getElementById('statue4');
-        const choices = new Choices(element4, {
-        placeholder: true,
-        placeholderValue:"Document Type"
-        });
-    }
-    if(document.querySelector("#statue5")){
-        const element5 = document.getElementById('statue5');
-        const choices = new Choices(element5, {
-        placeholder: true,
-        placeholderValue:"Deadline"
-        });
-    }
     if(document.querySelector("#chartContainer")){
     const data8 = [
     { x: '1', y: 10 },
@@ -498,10 +459,12 @@ export function click_modal(fun,array,fun2){
         let modal = document.querySelector(".modal");
         let closeModal = document.querySelector("#closeModal");
         let btn = document.querySelector(".add-application");
-        let create_btn = document.querySelector("#create");
         btn.addEventListener("click",function(){
-            modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
+        document.querySelector("#create").classList.remove("hidden");
+        document.querySelector("#btn_edit").classList.add("hidden")
+        modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
         })
+        let create_btn = document.querySelector("#create");
         closeModal.addEventListener("click",function(){
             modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
             setTimeout(() => {

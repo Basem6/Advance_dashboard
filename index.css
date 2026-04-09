@@ -255,12 +255,14 @@ tbody > tr:last-child > td {
 .choices {
   background-color: #ffffff !important;
   color: #1f2937;
-  border: 1px solid #e5e7eb !important;
+  border: 1px solid #d1d5dc;
+  border-radius: 4px;
 }
 .dark .choices {
   background-color: #111827 !important;
   color: white;
-  border: 1px solid #374151;
+  border: none;
+  border-radius: 4px;
 }
 .choices__inner {
   background-color: #ffffff !important;
@@ -1565,4 +1567,7 @@ button {
   .modal {
     width: 92%;
   }
+}
+.export_btn{
+  cursor: no-drop;
 }

@@ -1,6 +1,9 @@
+import Choices from 'choices.js';
+import 'choices.js/public/assets/styles/choices.min.css';
 import { render } from './main.js';
 import { click_modal } from './main.js';
 import '/index.css'
+import { setCulture } from '@syncfusion/ej2-base';
 let data_person=[];
 let data_admin=[];
 let admin_setting=[];
@@ -23,7 +26,6 @@ let mobile_nav_bar = document.querySelectorAll(".mobile-bottom-nav .nav-item");
 let array_nav = Array.from(nav_bar);
 let array_mobile_nav = Array.from(mobile_nav_bar);
 let main = document.querySelector(".content_dy");
-
 function updateActiveNav(dataLink) {
     array_nav.forEach((el) => {
         el.classList.remove("active");
@@ -147,8 +149,7 @@ function get_data(array, place , icon1, icon2){
                                 }
                             }
                             let td = document.createElement("td");
-                            // if(array!=data_admin){}
-                            td.classList.add("col-doc")
+                            td.classList.add("col-doc");
                             let eyeBtn = document.createElement("button");
                             let pencilBtn = document.createElement("button");
                             if(icon1=="trash-can" && icon2=="upload"){
@@ -157,7 +158,7 @@ function get_data(array, place , icon1, icon2){
                             }
                             if(icon1=="eye" && icon2=="pencil"){
                                 eyeBtn.className="fa-solid fa-eye mr-2 text-blue-500/80"
-                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80"
+                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80 edit"
                             }
                             if(icon1=="trash-can" && icon2=="pencil"){
                                 eyeBtn.className="fa-solid fa-trash-can mr-2 text-blue-500/80 delete"
@@ -202,13 +203,75 @@ function filter(target, array ,place , icon1, icon2){
 async function application_page() {
     await get_page("application.html",render);
     await get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+    const element = document.getElementById('statue');
+    let choices1 = new Choices(element, {
+    searchEnabled: false,   // الغاء البحث
+    removeItemButton: false,
+    placeholder: true,
+    placeholderValue:"Select Statue"
+    });
+    const element2 = document.getElementById('statue2');
+    const choices2 = new Choices(element2, {
+    searchEnabled: false,   // الغاء البحث
+    removeItemButton: false,
+    placeholder: true,
+    placeholderValue:"Select Document Type"
+    });
     document.querySelectorAll(".input").forEach((e)=>{ 
         e.addEventListener("input",function(){
             filter(e,data_person,document.querySelector(".body_table"),"eye","pencil")
         })
     })
     click_modal(get_data,data_person,delete_input)
-}
+    function delete_input(){
+        document.querySelector(".input_Major").value=""
+        document.querySelector(".input_name").value=""
+        choices1.removeActiveItems()
+        choices2.removeActiveItems()
+    }
+    function edit_information(fun2){
+            let modal = document.querySelector(".modal");
+            let btns = document.querySelectorAll(".edit");
+            let closeModal = document.querySelector("#closeModal");
+            let index_data;
+            btns.forEach((e,index)=>{
+                e.addEventListener("click",function(){
+                modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
+                console.log("done")
+                index_data=index;
+                document.querySelector("#create").classList.add("hidden");
+                document.querySelector("#btn_edit").classList.remove("hidden")
+                let name = data_person[index].person;
+                let major = data_person[index].Major;
+                let Doc =  data_person[index].Scholar;
+                let type =  data_person[index].status;
+                choices2.setChoiceByValue(Doc)
+                choices1.setChoiceByValue(type)
+                document.querySelector(".input_name").value=name;
+                document.querySelector(".input_Major").value=major;
+                closeModal.addEventListener("click",function(){
+                modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
+                setTimeout(() => {
+                    fun2()
+                }, 400);
+            })
+            
+                })
+            })
+            document.querySelector("#btn_edit").addEventListener("click",function(){
+                        let name_up=document.querySelector(".input_name").value
+                        let major_up=document.querySelector(".input_Major").value;
+                        let Doc_up=document.querySelector("#statue2").value;
+                        let Id = data_person[index_data].id;
+                        let type_up=document.querySelector("#statue").value;
+                        data_person.splice(index_data,1,{"id":`${Id}`,"person":`${name_up}`,"Major":`${major_up}`,"Scholar":`${Doc_up}`,"Date":"Jan 14,2024","status":`${type_up}`})
+                        modal.style.cssText="opacity: 0;transform: scale(0) translateX(-50%);"
+                        get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+                        delete_input()
+            })
+    }  
+    edit_information(delete_input)
+    }
 async function document_page() {
     await get_page("documents.html",render)
     get_data(data_admin, document.querySelector(".body_table_d"),"trash-can","upload")
@@ -246,7 +309,6 @@ function click_select() {
         })
     })
 }
-
 function remove_items(){
     let btns_delete = document.querySelectorAll(".delete");
     btns_delete.forEach((e)=>{
@@ -254,10 +316,6 @@ function remove_items(){
             e.parentElement.parentElement.remove();
         })
     })
-}
-function delete_input(){
-    document.querySelector(".input_Major").value=""
-    document.querySelector(".input_name").value=""
 }
 async function settings_page() {
     await get_page("setting.html",render)
