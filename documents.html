@@ -24,7 +24,7 @@
                 <div class="nav-middle  min-w-full bg-white dark:bg-[#16181c] border border-gray-200 dark:border-transparent min-h-16 mt-1 rounded-md flex gap-2 items-center p-2 flex-wrap">
                         <div class="search w-60  h-9 relative grow">
                             <span class="fa-solid fa-search absolute left-3 text-gray-400 text-sm top-1/2 -translate-y-1/2"></span>
-                            <input type="text" name="" placeholder="Search document, scholars" id="" class="bg-white dark:bg-[#22252d] border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 rounded-lg   pl-10 caret-[#78abf2] w-full h-full ">
+                            <input type="text" name="" data-category="file_type" placeholder="Search document, scholars" id="" class="bg-white input_doc dark:bg-[#22252d] border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 rounded-lg   pl-10 caret-[#78abf2] w-full h-full ">
                         </div>
                         <div class="max-w-fit  relative h-8 col-doc grow">
                             <div class="h-full select ">
@@ -47,7 +47,7 @@
                                 </button>
                             </div>
                             <div id="s_2" class="w-full mt-2  bg-white dark:bg-[#101315] border border-gray-300 dark:border-gray-700 rounded-lg z-50   overflow-hidden h-0 opacity-0 scale-95 pointer-events-none transition-all duration-200">
-                                    <button class="option btn_filter p-2 hover:bg-gray-100 dark:hover:bg-gray-950/70  rounded w-full cursor-pointer text-start mb-1 text-gray-900 dark:text-gray-100" data-category="file_type" data-type="btn">Eassy</button>
+                                    <button class="option btn_filter p-2 hover:bg-gray-100 dark:hover:bg-gray-950/70  rounded w-full cursor-pointer text-start mb-1 text-gray-900 dark:text-gray-100" data-category="file_type" data-type="btn">Essay</button>
                                     <button class="option btn_filter p-2 hover:bg-gray-100 dark:hover:bg-gray-950/70 rounded w-full cursor-pointer text-start my-1 text-gray-900 dark:text-gray-100" data-category="file_type" data-type="btn">Transcript</button>
                                     <button class="option btn_filter p-2 hover:bg-gray-100 dark:hover:bg-gray-950/70  rounded w-full cursor-pointer text-start text-gray-900 dark:text-gray-100" data-category="file_type" data-type="btn">Fasfa</button>
                             </div>
@@ -65,7 +65,7 @@
                             </div>
                         </div>
                         <div class="max-w-fit relative h-8  col-doc grow">
-                            <button class="whitespace-nowrap bg-blue-500 dark:bg-[#3183e7] text-white dark:text-white rounded-md py-1 px-3 hover:bg-blue-600 dark:hover:bg-blue-600 col-doc">Upload New file</button>
+                            <button class="whitespace-nowrap bg-blue-500 dark:bg-[#3183e7] text-white dark:text-white rounded-md py-1 px-3   col-doc btn_upload">Upload New file</button>
                         </div>
                 </div>
                 <main class="flex gap-2 mt-4 flex-wrap-reverse max-w-full " >
@@ -110,7 +110,7 @@
                                             <th class="col-doc">Statue</th>
                                             <th class="col-doc">Upload Date</th>
                                             <th class="">Last Upload By</th>
-                                            <!-- <th>Action</th> -->
+                                            <th class="col-action">Action</th>
                                         </tr>
                                     </thead>
                                     <tbody class="body_table_d">

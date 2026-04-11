@@ -1,9 +1,8 @@
 import Choices from 'choices.js';
 import 'choices.js/public/assets/styles/choices.min.css';
 import { render } from './main.js';
-import { click_modal } from './main.js';
 import '/index.css'
-import { setCulture } from '@syncfusion/ej2-base';
+import { datePartMatcher } from '@syncfusion/ej2-base/src/intl/date-formatter.js';
 let data_person=[];
 let data_admin=[];
 let admin_setting=[];
@@ -40,7 +39,6 @@ function updateActiveNav(dataLink) {
     if (activeDesktop) activeDesktop.classList.add("active");
     if (activeMobile) activeMobile.classList.add("active");
 }
-
 function handleNavigation(e) {
     updateActiveNav(e.dataset.link);
     
@@ -154,15 +152,15 @@ function get_data(array, place , icon1, icon2){
                             let pencilBtn = document.createElement("button");
                             if(icon1=="trash-can" && icon2=="upload"){
                                 eyeBtn.className="fa-solid fa-trash-can mr-2 text-red-400 delete"
-                                pencilBtn.className="fa-solid fa-upload mr-2 text-green-600"
+                                pencilBtn.className="fa-solid fa-upload mr-2 text-green-600 btn_upload"
                             }
                             if(icon1=="eye" && icon2=="pencil"){
-                                eyeBtn.className="fa-solid fa-eye mr-2 text-blue-500/80"
+                                eyeBtn.className="fa-solid fa-eye mr-2 text-blue-500/80 btn_upload"
                                 pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80 edit"
                             }
                             if(icon1=="trash-can" && icon2=="pencil"){
                                 eyeBtn.className="fa-solid fa-trash-can mr-2 text-blue-500/80 delete"
-                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80"
+                                pencilBtn.className="fa-solid fa-pencil mr-2 text-blue-500/80 btn_upload"
                             }
                             td.appendChild(eyeBtn);
                             td.appendChild(pencilBtn);
@@ -180,8 +178,9 @@ function get_data(array, place , icon1, icon2){
 function filter(target, array ,place , icon1, icon2){
                     place.innerHTML=""
                     let prop = target.dataset.category;
-                    let sorted_array = array.slice().sort((a, b) => {
-                    if(! target.dataset.type){
+                    if(prop){
+                    let sorted_array = array.sort((a, b) => {
+                    if(!target.dataset.type){
                         let aMatch = a[prop].toLowerCase().startsWith(target.value.toLowerCase());
                         let bMatch = b[prop].toLowerCase().startsWith(target.value.toLowerCase());
                         return bMatch - aMatch;
@@ -193,13 +192,15 @@ function filter(target, array ,place , icon1, icon2){
                             return new Date(a[prop]) - new Date(b[prop]);
                     }
                     else{
-                    let aMatch = a[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
-                    let bMatch = b[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
-                    return bMatch - aMatch;
+                        let aMatch = a[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
+                        let bMatch = b[prop].toLowerCase().startsWith(target.innerHTML.toLowerCase());
+                        return bMatch - aMatch;
                 }
             }});
                     get_data(sorted_array,place, icon1, icon2)
+                    }
 }
+let so;
 async function application_page() {
     await get_page("application.html",render);
     await get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
@@ -220,58 +221,11 @@ async function application_page() {
     document.querySelectorAll(".input").forEach((e)=>{ 
         e.addEventListener("input",function(){
             filter(e,data_person,document.querySelector(".body_table"),"eye","pencil")
+            edit_information(choices1,choices2)
         })
     })
-    click_modal(get_data,data_person,delete_input)
-    function delete_input(){
-        document.querySelector(".input_Major").value=""
-        document.querySelector(".input_name").value=""
-        choices1.removeActiveItems()
-        choices2.removeActiveItems()
-    }
-    function edit_information(fun2){
-            let modal = document.querySelector(".modal");
-            let btns = document.querySelectorAll(".edit");
-            let closeModal = document.querySelector("#closeModal");
-            let index_data;
-            btns.forEach((e,index)=>{
-                e.addEventListener("click",function(){
-                modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
-                console.log("done")
-                index_data=index;
-                document.querySelector("#create").classList.add("hidden");
-                document.querySelector("#btn_edit").classList.remove("hidden")
-                let name = data_person[index].person;
-                let major = data_person[index].Major;
-                let Doc =  data_person[index].Scholar;
-                let type =  data_person[index].status;
-                choices2.setChoiceByValue(Doc)
-                choices1.setChoiceByValue(type)
-                document.querySelector(".input_name").value=name;
-                document.querySelector(".input_Major").value=major;
-                closeModal.addEventListener("click",function(){
-                modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
-                setTimeout(() => {
-                    fun2()
-                }, 400);
-            })
-            
-                })
-            })
-            document.querySelector("#btn_edit").addEventListener("click",function(){
-                        let name_up=document.querySelector(".input_name").value
-                        let major_up=document.querySelector(".input_Major").value;
-                        let Doc_up=document.querySelector("#statue2").value;
-                        let Id = data_person[index_data].id;
-                        let type_up=document.querySelector("#statue").value;
-                        data_person.splice(index_data,1,{"id":`${Id}`,"person":`${name_up}`,"Major":`${major_up}`,"Scholar":`${Doc_up}`,"Date":"Jan 14,2024","status":`${type_up}`})
-                        modal.style.cssText="opacity: 0;transform: scale(0) translateX(-50%);"
-                        get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
-                        delete_input()
-            })
-    }  
-    edit_information(delete_input)
-    }
+    edit_information(choices1,choices2)
+}
 async function document_page() {
     await get_page("documents.html",render)
     get_data(data_admin, document.querySelector(".body_table_d"),"trash-can","upload")
@@ -283,6 +237,9 @@ async function document_page() {
             filter(e,data_admin,document.querySelector(".body_table_d"), "trash-can" ,"upload")
             
         })
+    })
+    document.querySelector(".input_doc").addEventListener("input",function(e){
+        filter(e.target,data_admin,document.querySelector(".body_table_d"), "trash-can" ,"upload")
     })
 }
 function click_select() {
@@ -330,3 +287,102 @@ function change_theme(){
     })
 }
 change_theme()
+function edit_information(cho1 , cho2 ){
+            let modal = document.querySelector(".modal");
+            let btns = document.querySelectorAll(".edit");
+            let btn_click = document.querySelector(".add-application");
+            let closeModal = document.querySelector("#closeModal");
+            let index_data;
+            btns.forEach((e,index)=>{
+                e.addEventListener("click",function(){
+                modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
+                console.log("done")
+                document.querySelector("#create").classList.add("hidden");
+                document.querySelector("#btn_edit").classList.remove("hidden")
+                let im = e.parentElement.parentElement.children[0].innerHTML;
+                let after;
+                data_person.find((e,ind)=>{
+                    if(e.id==+im){
+                        after=ind
+                        return e
+                    }
+                })
+                index_data=after;
+                let name = data_person[after].person;
+                let major = data_person[after].Major;
+                let Doc =  data_person[after].Scholar;
+                let type =  data_person[after].status;
+                cho2.setChoiceByValue(Doc)
+                cho1.setChoiceByValue(type)
+                document.querySelector(".input_name").value=name;
+                document.querySelector(".input_Major").value=major;
+                closeModal.addEventListener("click",function(){
+                modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
+                setTimeout(() => {
+                    delete_input(cho1,cho2)
+                }, 400);
+            })
+            
+                })
+            })
+            document.querySelector("#btn_edit").addEventListener("click",function(){
+                        let name_up=document.querySelector(".input_name").value
+                        let major_up=document.querySelector(".input_Major").value;
+                        let Doc_up=document.querySelector("#statue2").value;
+                        let type_up=document.querySelector("#statue").value;
+                        data_person[index_data]={...data_person[index_data],"person":`${name_up}`,"Major":`${major_up}`,"Scholar":`${Doc_up}`,"status":`${type_up}`}
+                        modal.style.cssText="opacity: 0;transform: scale(0) translateX(-50%);"                      
+                        get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+                        setTimeout(() => {
+                            delete_input(cho1,cho2)
+                            edit_information(cho1,cho2)
+                            index_data=null
+                        }, 400);
+                        
+            })
+            btn_click.addEventListener("click",function(){
+            document.querySelector("#create").classList.remove("hidden");
+            document.querySelector("#btn_edit").classList.add("hidden")
+            modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
+            })
+            let create_btn = document.querySelector("#create");
+            closeModal.addEventListener("click",function(){
+                modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
+                setTimeout(() => {
+                        delete_input(cho1,cho2)
+                }, 400);
+            })
+            create_btn.addEventListener("click",function(){
+                    let Months = ["Jan","Fep","Mar","Apr","May","Jun","Jul","agu","Sep","Oct","Nov","Dec"];
+                    let data=new Date()
+                    let current_date = `${Months[data.getMonth()]} ${data.getDate()},${data.getFullYear()}`;
+                    if(document.querySelector(".input_Major").value!="" && document.querySelector(".input_name").value!=""){
+                        let inner_input_Major = document.querySelector(".input_Major").value.trim();
+                        let inner_input_Name = document.querySelector(".input_name").value.trim();
+                        let choice_document = document.querySelector("#statue2").value;
+                        let choice_statue = document.querySelector("#statue").value;
+                        delete_input(cho1,cho2)
+                        modal.style.cssText="opacity: 0;transform: scale(0) translateX(-50%);"
+                        data_person.push({id:data_person[(data_person.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,status:choice_statue});
+                        document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
+                        setTimeout(() => {
+                            document.querySelector(".meesage").style.cssText="opacity:0;display:none;"
+                        }, 1400);
+                        get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
+                        edit_information(cho1,cho2)
+                        
+                    }
+                    // else{
+                    //     document.querySelector(".meesage2").style.cssText="opacity:1;display:block;"
+                    //     setTimeout(() => {
+                    //         document.querySelector(".meesage2").style.cssText="opacity:0;display:none;"
+                    //     }, 2000);
+                    // }
+            })
+}
+function delete_input(cho1,cho2){
+        document.querySelector(".input_Major").value=""
+        document.querySelector(".input_name").value=""
+        cho1.removeActiveItems()
+        cho2.removeActiveItems()
+} 

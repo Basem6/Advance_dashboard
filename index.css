@@ -1571,3 +1571,6 @@ button {
 .export_btn{
   cursor: no-drop;
 }
+.btn_upload{
+  cursor: no-drop;
+}

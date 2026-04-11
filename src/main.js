@@ -2,7 +2,6 @@ import { registerLicense } from '@syncfusion/ej2-base';
 registerLicense("Ngo9BigBOggjHTQxAR8/V1JHaF5cWWdCekx3Qnxbf1x2ZFZMZV1bRHFPIiBoS35RcEVgW3pecXFVQmlbU0N2VEFe");
 import './addclick.js'
 import '/index.css'
-import Choices from 'choices.js';
 import 'choices.js/public/assets/styles/choices.min.css';
 import {
     Chart,
@@ -455,50 +454,6 @@ setTimeout(() => {
 }, 0);
     }
 }
-export function click_modal(fun,array,fun2){
-        let modal = document.querySelector(".modal");
-        let closeModal = document.querySelector("#closeModal");
-        let btn = document.querySelector(".add-application");
-        btn.addEventListener("click",function(){
-        document.querySelector("#create").classList.remove("hidden");
-        document.querySelector("#btn_edit").classList.add("hidden")
-        modal.style.cssText="opacity:1;transform: scale(1) translateX(-50%);"
-        })
-        let create_btn = document.querySelector("#create");
-        closeModal.addEventListener("click",function(){
-            modal.style.cssText="opacity:0;transform: scale(0) translateX(-50%);"
-            setTimeout(() => {
-                    fun2()
-            }, 400);
-        })
-        create_btn.addEventListener("click",function(){
-                let Months = ["Jan","Fep","Mar","Apr","May","Jun","Jul","agu","Sep","Oct","Nov","Dec"];
-                let data=new Date()
-                let current_date = `${Months[data.getMonth()]} ${data.getDate()},${data.getFullYear()}`;
-                if(document.querySelector(".input_Major").value!="" && document.querySelector(".input_name").value!=""){
-                    let inner_input_Major = document.querySelector(".input_Major").value.trim();
-                    let inner_input_Name = document.querySelector(".input_name").value.trim();
-                    let choice_document = document.querySelector("#statue2").value;
-                    let choice_statue = document.querySelector("#statue").value;
-                    fun2()
-                    modal.style.cssText="opacity: 0;;transform: scale(0) translateX(-50%);"
-                    array.push({id:array[(array.length-1)].id +1,person:inner_input_Name,Major:inner_input_Major,Scholar:choice_document,Date:current_date,status:choice_statue});
-                    document.querySelector(".meesage").style.cssText="opacity:1;display:block;"
-                    setTimeout(() => {
-                        document.querySelector(".meesage").style.cssText="opacity:0;display:none;"
-                    }, 1400);
-                    fun(array,document.querySelector(".body_table"),"eye","pencil")
-                }
-                else{
-                    document.querySelector(".meesage2").style.cssText="opacity:1;display:block;"
-                    setTimeout(() => {
-                        document.querySelector(".meesage2").style.cssText="opacity:0;display:none;"
-                    }, 2000);
-                }
-        })
-}
-
-// ============ THEME TOGGLE ============
 const initTheme = () => {
     const savedTheme = localStorage.getItem('theme') || 'dark';
     const htmlElement = document.documentElement;
@@ -515,13 +470,11 @@ const initTheme = () => {
         if (checkbox) checkbox.checked = false;
     }
 };
-
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initTheme);
 } else {
     initTheme();
 }
-
 const themeToggle = document.querySelector('.bb8-toggle__checkbox');
 if (themeToggle) {
     themeToggle.addEventListener('change', () => {
