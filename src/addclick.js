@@ -200,7 +200,6 @@ function filter(target, array ,place , icon1, icon2){
                     get_data(sorted_array,place, icon1, icon2)
                     }
 }
-let so;
 async function application_page() {
     await get_page("application.html",render);
     await get_data(data_person,document.querySelector(".body_table"),"eye","pencil")
@@ -235,7 +234,7 @@ async function document_page() {
     btns_filter.forEach((e)=>{
         e.addEventListener("click",function(el){
             filter(e,data_admin,document.querySelector(".body_table_d"), "trash-can" ,"upload")
-            
+            remove_items()
         })
     })
     document.querySelector(".input_doc").addEventListener("input",function(e){
