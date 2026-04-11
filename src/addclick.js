@@ -179,7 +179,7 @@ function filter(target, array ,place , icon1, icon2){
                     place.innerHTML=""
                     let prop = target.dataset.category;
                     if(prop){
-                    let sorted_array = array.sort((a, b) => {
+                    let sorted_array = array.slice().sort((a, b) => {
                     if(!target.dataset.type){
                         let aMatch = a[prop].toLowerCase().startsWith(target.value.toLowerCase());
                         let bMatch = b[prop].toLowerCase().startsWith(target.value.toLowerCase());
